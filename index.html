@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html data-theme="dark" class="scroll-lock">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jean-Pierre Rose - Développeur web front-end</title>
+    <meta name="description" content="Jean-Pierre Rose - Développeur Web Front-End"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/loader.css?v.1.0.1">
+    <link rel="stylesheet" href="./css/style.css?v.1.0.1">
+    <link rel="stylesheet" href="./css/theme.css?v.1.0.1">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <section class="loader" id="loader" aria-hidden="true">
+        <div class="loader-content" id="loader-content">
+            <img src="svg/logo.svg" class="loader__logo" alt="Logo Jean-Pierre Rose, développeur web front-end">
+            <div class="loader__cube">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:#48AAC1;}
+                    .st1{fill:#75C4D1;}
+                    .st2{fill:#4EC0E3;}
+                </style>
+                <g>
+                    <polygon class="st0" points="29,58 3,45 3,13 29,26 	"/>
+                    <polygon class="st1" points="29,58 55,45 55,13 29,26 	"/>
+                    <polygon class="st2" points="3,13 28,0 55,13 29,26 	"/>
+                </g>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <header class="header padded">
+        <!--nav>
+            <ul>
+                <li></li>
+            </ul>
+        </nav-->
+        <div class="header__ctas">
+            <img src="svg/logo.svg" class="header__logo" alt="Logo Jean-Pierre Rose, développeur web front-end">
+            <!--div class="header__links">
+                <a class="header__link header__link--email link-hover" href="mailto:jiprose@gmail.com" aria-label="Couriel"><img src="svg/email.svg" class="header__svg" alt="Logo couriel"></a>
+                <a class="header__link header__link--linkedin link-hover" href="https://www.linkedin.com/in/jean-pierre-rose/" target="_blank"><img src="svg/linkedin.svg" class="header__svg" alt="Logo LinkedIn"></a>
+            </div-->
+        </div>
+        <div class="theme-toggler">
+            <label class="show-tooltip" role="switch" aria-labelledby="switch-label-1">
+                <input type="checkbox" id="switch-theme" checked>
+                <span class="switch">
+                    <i class="fas fa-sun" data-element="theme-light-icon" aria-label="Thème clair"></i>
+                    <i class="fas fa-moon" data-element="theme-dark-icon" aria-label="Thème sombre"></i>
+                </span>
+                <span role="tooltip" class="tooltip-middle-left" id="switch-label-1" data-text-on="Activer le mode sombre" data-text-off="Déactiver le mode sombre">Déactiver le mode sombre</span>
+            </label>
+        </div>
+    </header>
+    <main class="main padded">
+        <section class="about" data-tofadein>
+            <h1 class="about__tile">Jean-Pierre Rose</h1>
+            <h2 class="about__subtile highlight">Développeur web front-end</h2>
+            <p class="about__desc">Je developpe et intègre des interfaces pour des sites et application web. Mon rôle est de créer une <span class="highlight">expérience utilisateur</span> irréprochable en livrant des produits <span class="highlight">accessibles</span>.</p>
+            <h3 class="about__contact">Prenez contact!</h3>
+            <div class="about__links">
+                <a class="about__link about__link--email link-hover" href="mailto:jiprose@gmail.com" aria-label="Couriel"><img src="svg/email.svg" class="about__svg" alt="Logo couriel"></a>
+                <a class="about__link about__link--linkedin link-hover" href="https://www.linkedin.com/in/jean-pierre-rose/" target="_blank"><img src="svg/linkedin.svg" class="about__svg" alt="Logo LinkedIn"></a>
+            </div>
+        </section>
+        <section class="animation" data-tofadein style="animation-delay:.5s;" aria-hidden="true">
+            <img src="svg/cube2.svg" class="animation__cube" alt="Cube">
+            <div class="animation__shadow"></div>
+        </section>
+        </section>
+    </main>
+    <section class="more padded">
+        <h1 class="more__title">Un peu plus sur moi</h1>
+        <p class="more__par">Après avoir gradué en multimédia en 2010, mon chemin s'est orienté dans le développement web front-end. J'ai travaillé sur un grands types de projets web; site webs grand publique, applications internes d'entreprise, infolettres, intranets.</p>
+    </section>
+
+    <section>
+        
+    </section>
+
+    <script type="text/javascript" src="/js/lib/TweenMax.min.js"></script>
+	<script type="text/javascript" src="/js/lib/ScrollMagic.js"></script>
+	<script type="text/javascript" src="/js/lib/animation.gsap.js"></script>
+	<script type="text/javascript" src="/js/lib/debug.addIndicators.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script>
+        /*var controller = new ScrollMagic.Controller();
+        // build scene
+        var scene = new ScrollMagic.Scene({triggerElement: "#scrapper-trigger-parallax", duration: "60%"})
+        .setTween("#test", {bottom: "1.5rem"}) // the tween durtion can be omitted and defaults to 1
+        .addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
+        .addTo(controller);
+        var scene = new ScrollMagic.Scene({triggerElement: "#scrapper-trigger-parallax", duration: "45%"})
+        .setTween("#test2", {left: "0rem"}) // the tween durtion can be omitted and defaults to 1
+        .addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
+        .addTo(controller);*/
+    </script>
+</body>
+</html>

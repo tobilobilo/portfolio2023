@@ -1,0 +1,114 @@
+.loader {
+    text-align: center;
+    padding-top: 4rem;
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    animation: loaderFadeOut .5s ease 5.9s 1 forwards;
+}
+.loader-content {
+    animation: loaderScaleOut .7s ease-in-out 5.5s 1 forwards;
+}
+
+@keyframes loaderFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes loaderScaleOut {
+    0% {
+        transform: scale(1);
+    }
+    14% {
+        transform: scale(1.38);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.loader__logo {
+    width: 80px;
+    filter: var(--highlight-color-filtered);
+    opacity: 0;
+    animation-name: logofadein;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logofadein {
+    from {
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+.loader__cube {
+    width: 180px;
+    margin: 7rem auto 0;
+}
+.loader__cube svg {
+    overflow: visible;
+}
+.loader__cube .st2 {
+    opacity: 0;
+    transform: translateY(-.5rem);
+    animation: loaderfadein .8s ease 2.4s 1 forwards, translateSt2 .6s ease 3.4s 1 forwards;
+}
+.loader__cube .st1 {
+    opacity: 0;
+    transform: translateY(.5rem) translateX(.5rem);
+    animation: loaderfadein .8s ease 2.7s 1 forwards, translateSt1 .6s ease 3.7s 1 forwards;;
+}
+.loader__cube .st0 {
+    opacity: 0;
+    transform: translateY(.5rem) translateX(-.5rem);
+    animation: loaderfadein .8s ease 3s 1 forwards, translateSt0 .6s ease 4s 1 forwards;;
+}
+
+@keyframes loaderfadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes translateSt2 {
+    from {
+        transform: translateY(-.5rem);
+    }
+    to {
+        transform: translateY(0rem);
+    }
+}
+@keyframes translateSt1 {
+    from {
+        transform: translateY(.5rem) translateX(.5rem);
+    }
+    to {
+        transform: translateY(0rem) translateX(0rem);
+    }
+}
+@keyframes translateSt0 {
+    from {
+        transform: translateY(.5rem) translateX(-.5rem);
+    }
+    to {
+        transform: translateY(0rem) translateX(0rem);
+    }
+}
