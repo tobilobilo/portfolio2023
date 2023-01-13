@@ -26,15 +26,6 @@ img, video {
     height: auto;
 }
 
-.padded {
-    padding: .75rem 1.5rem;
-}
-@media screen and (min-width: 960px) {
-    .padded {
-        padding: 1.25rem 2rem;
-    }
-}
-
 html.scroll-lock, 
 html.scroll-lock body {
     overflow: hidden;
@@ -63,32 +54,6 @@ html.scroll-lock body {
     }
 }
 
-.highlight {
-    color: var(--highlight-color);
-}
-
-.link-hover {
-    position: relative;
-    text-decoration: none;
-    transition: opacity 0.3s;
-}
-.link-hover:after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    background-color: var(--highlight-color);
-    transition: width 0.3s;
-}
-.link-hover:hover {
-    opacity: .5;
-}
-.link-hover:hover:after {
-    width: 100%;
-}
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -101,9 +66,14 @@ html.scroll-lock body {
         width: 29px;
         filter: var(--highlight-color-filtered);
     }
+    @media screen and (min-width: 960px) {
+        .header__logo {
+            width: 36px;
+        }
+    }
     @media screen and (min-width: 1440px) {
         .header__logo {
-            width: 34px;
+            width: 44px;
         }
     }
     .header__ctas {
@@ -230,8 +200,8 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
 }
 
 
-.main {
-
+.main { 
+    min-height: calc(100vh - 74px);
 }
 @media screen and (min-width: 720px) {
     .main {
@@ -253,11 +223,9 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
     font-weight: 600;
     font-size: 2rem;
 }
-.about__subtile {
+.about__subtitle {
     padding: .2rem 0 0;
     margin: 0;
-    font-weight: 400;
-    font-size: 1.15rem;
 }
 .about__desc {
     padding: 1.8rem 0 0;
@@ -287,7 +255,7 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
     .about__tile {
         font-size: 3.4rem;
     }
-    .about__subtile {
+    .about__subtitle {
         font-size: 1.85rem;
     }
     .about__desc {
@@ -368,9 +336,6 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
 .more__title {
     padding: .2rem 0 0;
     margin: 0;
-    font-weight: 400;
-    font-size: 1.15rem;
-    color: var(--highlight-color);
 }
 .more__par {
     padding: 1rem 0 0;
@@ -378,4 +343,96 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
     font-weight: 400;
     font-size: .95rem;
     color: var(--font-sub-color);
+}
+@media screen and (min-width: 960px) {
+    .more__par {
+        font-size: 1.1rem;
+        max-width: 800px;
+    }
+}
+
+.skills__title {
+    margin: 1.5rem 0 2rem;
+}
+
+.skills__tables {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.skills__table {
+    margin: 0 .75rem 1.75rem;
+    display: flex;
+    align-items: flex-start;
+}
+.skills__logowrapper {
+    background-color: var(--bg-card-color);
+    padding: 1rem;
+    margin: 0;
+    border-radius: 999px;
+}
+.skills__logo {
+    width: 36px;
+    display: block;
+    filter: var(--highlight-color-filtered);
+}
+.skills__logo--smaller {
+    width: 38px;
+}
+.skills__texts {
+    text-align: left;
+    padding: 0 1rem;
+}
+.skills__subtitle {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: .95rem;
+}
+.skills__list {
+    list-style: none;
+    padding: 0;
+    margin: .5rem 0 0;
+    width: 130px;
+}
+.skills__item {
+    font-size: .88rem;
+    text-align: left;
+    color: var(--font-sub-color);
+}
+@media screen and (min-width: 960px) {
+    .skills__logowrapper {
+        padding: 1.45rem;
+    }
+    .skills__logo {
+        width: 43px;
+    }
+    .skills__logo--smaller {
+        width: 46px;
+    }
+    .skills__subtitle {
+        font-size: 1.1rem;
+    }
+    .skills__item {
+        font-size: .95rem;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .skills__logowrapper {
+        padding: 1.75rem;
+    }
+    .skills__logo {
+        width: 52px;
+    }
+    .skills__logo--smaller {
+        width: 62px;
+    }
+    .skills__subtitle {
+        font-size: 1.30rem;
+    }
+    .skills__item {
+        font-size: 1rem;
+    }
 }

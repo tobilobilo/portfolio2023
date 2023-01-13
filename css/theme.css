@@ -4,7 +4,7 @@
 */
 
 [data-theme="light"] {
-    --bg-color: #f3f5f7;
+    --bg-color: #f3f5f7; /* alt:#e9eaeb */
     --font-color: #202d4e;
     --font-sub-color: #747e83;
     --highlight-color: #2fa7cc;

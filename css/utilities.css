@@ -1,0 +1,49 @@
+.padded {
+    padding: .75rem 1.5rem;
+}
+@media screen and (min-width: 960px) {
+    .padded {
+        padding: 1.25rem 2rem;
+    }
+}
+.centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 1.15rem;
+}
+@media screen and (min-width: 960px) {
+    .subtitle {
+        font-size: 1.85rem;
+    }
+}
+
+.highlight {
+    color: var(--highlight-color);
+}
+
+.link-hover {
+    position: relative;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+.link-hover:after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--highlight-color);
+    transition: width 0.3s;
+}
+.link-hover:hover {
+    opacity: .5;
+}
+.link-hover:hover:after {
+    width: 100%;
+}

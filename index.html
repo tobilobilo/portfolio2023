@@ -5,6 +5,7 @@
     <title>Jean-Pierre Rose - Développeur web front-end</title>
     <meta name="description" content="Jean-Pierre Rose - Développeur Web Front-End"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/utilities.css?v.1.0.1">
     <link rel="stylesheet" href="./css/loader.css?v.1.0.1">
     <link rel="stylesheet" href="./css/style.css?v.1.0.1">
     <link rel="stylesheet" href="./css/theme.css?v.1.0.1">
@@ -16,8 +17,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body>
-    <section class="loader" id="loader" aria-hidden="true">
+<body> 
+    <section class="loader" id="loader" aria-hidden="true" style="opacity:0;"> <!-- retirer opacity 0 avant mise en ligne pour afficher le loader -->
         <div class="loader-content" id="loader-content">
             <img src="svg/logo.svg" class="loader__logo" alt="Logo Jean-Pierre Rose, développeur web front-end">
             <div class="loader__cube">
@@ -44,7 +45,7 @@
             </ul>
         </nav-->
         <div class="header__ctas">
-            <img src="svg/logo.svg" class="header__logo" alt="Logo Jean-Pierre Rose, développeur web front-end">
+            <img src="svg/logo-jpr.svg" class="header__logo" alt="Logo Jean-Pierre Rose, développeur web front-end">
             <!--div class="header__links">
                 <a class="header__link header__link--email link-hover" href="mailto:jiprose@gmail.com" aria-label="Couriel"><img src="svg/email.svg" class="header__svg" alt="Logo couriel"></a>
                 <a class="header__link header__link--linkedin link-hover" href="https://www.linkedin.com/in/jean-pierre-rose/" target="_blank"><img src="svg/linkedin.svg" class="header__svg" alt="Logo LinkedIn"></a>
@@ -64,12 +65,12 @@
     <main class="main padded">
         <section class="about" data-tofadein>
             <h1 class="about__tile">Jean-Pierre Rose</h1>
-            <h2 class="about__subtile highlight">Développeur web front-end</h2>
+            <h2 class="about__subtitle subtitle highlight">Développeur web front-end</h2>
             <p class="about__desc">Je developpe et intègre des interfaces pour des sites et application web. Mon rôle est de créer une <span class="highlight">expérience utilisateur</span> irréprochable en livrant des produits <span class="highlight">accessibles</span>.</p>
             <h3 class="about__contact">Prenez contact!</h3>
             <div class="about__links">
-                <a class="about__link about__link--email link-hover" href="mailto:jiprose@gmail.com" aria-label="Couriel"><img src="svg/email.svg" class="about__svg" alt="Logo couriel"></a>
-                <a class="about__link about__link--linkedin link-hover" href="https://www.linkedin.com/in/jean-pierre-rose/" target="_blank"><img src="svg/linkedin.svg" class="about__svg" alt="Logo LinkedIn"></a>
+                <a class="about__link about__link--email link-hover" href="mailto:jiprose@gmail.com" aria-label="Couriel"><img src="svg/icon-email.svg" class="about__svg" alt="Logo couriel"></a>
+                <a class="about__link about__link--linkedin link-hover" href="https://www.linkedin.com/in/jean-pierre-rose/" target="_blank"><img src="svg/icon-linkedin.svg" class="about__svg" alt="Logo LinkedIn"></a>
             </div>
         </section>
         <section class="animation" data-tofadein style="animation-delay:.5s;" aria-hidden="true">
@@ -78,13 +79,67 @@
         </section>
         </section>
     </main>
-    <section class="more padded">
-        <h1 class="more__title">Un peu plus sur moi</h1>
-        <p class="more__par">Après avoir gradué en multimédia en 2010, mon chemin s'est orienté dans le développement web front-end. J'ai travaillé sur un grands types de projets web; site webs grand publique, applications internes d'entreprise, infolettres, intranets.</p>
+    <section class="more padded" id="fade-trigger-01">
+        <h2 class="more__title subtitle highlight" data-tofadein>Un peu plus sur moi</h2>
+        <p class="more__par" data-tofadein style="animation-delay:.5s;">Après avoir gradué en multimédia en 2010, mon chemin s'est orienté dans le développement web front-end. J'ai travaillé sur un grands types de projets web; site webs grand publique, applications internes d'entreprise, infolettres, intranets.</p>
     </section>
 
-    <section>
-        
+    <section class="skills padded centered" id="fade-trigger-02">
+        <h2 class="skills__title subtitle highlight" data-tofadein>Mes compétences</h2>
+        <div class="skills__tables">
+            <div class="skills__table" data-tofadein style="animation-delay:.4s;">
+                <div class="skills__logowrapper">
+                    <img class="skills__logo skills__logo--smaller" src="svg/skill-html.svg" alt="HTML" aria-hidden="true">
+                </div>
+                <div class="skills__texts">
+                    <h3 class="skills__subtitle ">HTML</h3>
+                    <ul class="skills__list">
+                        <li class="skills__item">Sémantique</li>
+                        <li class="skills__item">Accessibilité</li>
+                        <li class="skills__item">Bootstrap</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills__table" data-tofadein style="animation-delay:.55s;">
+                <div class="skills__logowrapper">
+                    <img class="skills__logo skills__logo--smaller" src="svg/skill-css.svg" alt="CSS" aria-hidden="true">
+                </div>
+                <div class="skills__texts">
+                    <h3 class="skills__subtitle ">CSS</h3>
+                    <ul class="skills__list">
+                        <li class="skills__item">SASS</li>
+                        <li class="skills__item">LESS</li>
+                        <li class="skills__item">BEM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills__table" data-tofadein style="animation-delay:.7s;">
+                <div class="skills__logowrapper">
+                    <img class="skills__logo" src="svg/skill-js.svg" alt="Javascript" aria-hidden="true">
+                </div>
+                <div class="skills__texts">
+                    <h3 class="skills__subtitle ">Javascript</h3>
+                    <ul class="skills__list">
+                        <li class="skills__item">ES6+</li>
+                        <li class="skills__item">jQuery</li>
+                        <li class="skills__item">vue.js</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills__table" data-tofadein style="animation-delay:.85s;">
+                <div class="skills__logowrapper">
+                    <img class="skills__logo" src="svg/skill-window.svg" alt="UI / UX" aria-hidden="true">
+                </div>
+                <div class="skills__texts">
+                    <h3 class="skills__subtitle ">UI / UX</h3>
+                    <ul class="skills__list">
+                        <li class="skills__item">Photoshop</li>
+                        <li class="skills__item">Illustrator</li>
+                        <li class="skills__item">Chart</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script type="text/javascript" src="/js/lib/TweenMax.min.js"></script>
@@ -93,9 +148,9 @@
 	<script type="text/javascript" src="/js/lib/debug.addIndicators.js"></script>
     <script src="./js/scripts.js"></script>
     <script>
-        /*var controller = new ScrollMagic.Controller();
+        var controller = new ScrollMagic.Controller();
         // build scene
-        var scene = new ScrollMagic.Scene({triggerElement: "#scrapper-trigger-parallax", duration: "60%"})
+        /*var scene = new ScrollMagic.Scene({triggerElement: "#scrapper-trigger-parallax", duration: "60%"})
         .setTween("#test", {bottom: "1.5rem"}) // the tween durtion can be omitted and defaults to 1
         .addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
         .addTo(controller);
@@ -103,6 +158,33 @@
         .setTween("#test2", {left: "0rem"}) // the tween durtion can be omitted and defaults to 1
         .addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
         .addTo(controller);*/
+        // build scene - fade in stuff
+		new ScrollMagic.Scene({
+            triggerElement: "#fade-trigger-01",
+            triggerHook: .9,
+            offset: 130, // move trigger to center of element
+            reverse: false // only do once
+        })
+        .addIndicators() // add indicators (requires plugin)
+        .on("enter leave", function (e) {
+            setTimeout(function() {
+                toFadeIn(document.querySelectorAll('#fade-trigger-01 [data-tofadein]'));
+            },250);
+        })
+        .addTo(controller);
+        new ScrollMagic.Scene({
+            triggerElement: "#fade-trigger-02",
+            triggerHook: 5,
+            offset: 150, // move trigger to center of element
+            reverse: false // only do once
+        })
+        .addIndicators() // add indicators (requires plugin)
+        .on("enter leave", function (e) {
+            setTimeout(function() {
+                toFadeIn(document.querySelectorAll('#fade-trigger-02 [data-tofadein]'));
+            },250);
+        })
+        .addTo(controller);
     </script>
 </body>
 </html>
