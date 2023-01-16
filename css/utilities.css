@@ -1,9 +1,42 @@
+html.scroll-lock, 
+html.scroll-lock body {
+    overflow: hidden;
+}
+html.scroll-lock body {
+    position: fixed;
+}
+
+[data-tofadein] {
+    opacity: 0;
+}
+[data-fadedin] {
+    animation-name: fadein;
+    animation-duration: .6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein {
+    from {
+        transform: translateY(1.5rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
 .padded {
     padding: .75rem 1.5rem;
 }
 @media screen and (min-width: 960px) {
     .padded {
         padding: 1.25rem 2rem;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .padded {
+        padding: 1.5rem 5rem;
     }
 }
 .centered {
@@ -46,4 +79,41 @@
 }
 .link-hover:hover:after {
     width: 100%;
+}
+
+[role="tooltip"] {
+    display: inline-block;
+    position: absolute;
+    top: calc(100% + .25rem);
+    left: 0%;
+    border-radius: 5px;
+    padding: 0.15rem 0.3rem;
+    font-family: var(--main-font-family);
+    font-weight: 200;
+    font-size: .7rem;
+    line-height: .7rem;
+    vertical-align: middle;
+    color: #fff;
+    background-color: #6a6a6a;
+    white-space: nowrap;
+    -webkit-box-shadow: 1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 3px -1px rgba(0,0,0,0.75);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+    transition-delay: 0s;
+    z-index: 2;
+}
+[role="tooltip"].tooltip-middle-left {
+    top: 50%;
+    transform: translateY(-50%);
+    left: auto;
+    right: calc(100% + .25rem);
+}
+.show-tooltip:focus [role="tooltip"],
+.show-tooltip:hover [role="tooltip"] {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: .5s;
 }
