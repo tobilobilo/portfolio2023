@@ -31,7 +31,7 @@ html.scroll-lock body {
 }
 @media screen and (min-width: 960px) {
     .padded {
-        padding: 1.25rem 2rem;
+        padding: 1.25rem 3rem;
     }
 }
 @media screen and (min-width: 1800px) {
@@ -62,6 +62,7 @@ html.scroll-lock body {
 .link-hover {
     position: relative;
     text-decoration: none;
+    color: var(--highlight-color);
     transition: opacity 0.3s;
 }
 .link-hover:after {
@@ -72,9 +73,14 @@ html.scroll-lock body {
     bottom: -2px;
     left: 0;
     background-color: var(--highlight-color);
-    transition: width 0.3s;
+    transition: all 0.3s;
 }
-.link-hover:hover {
+.link-hover.show-tooltip i {
+    transition: all 0.3s;
+}
+.link-hover:not(.show-tooltip):hover,
+.link-hover.show-tooltip:hover:after,
+.link-hover.show-tooltip:hover i {
     opacity: .5;
 }
 .link-hover:hover:after {
