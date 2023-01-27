@@ -33,10 +33,18 @@ html.scroll-lock body {
     .padded {
         padding: 1.25rem 3rem;
     }
+    .padded .padded {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 @media screen and (min-width: 1800px) {
     .padded {
         padding: 1.5rem 5rem;
+    }
+    .padded .padded {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
     }
 }
 .centered {
@@ -52,6 +60,25 @@ html.scroll-lock body {
 @media screen and (min-width: 960px) {
     .subtitle {
         font-size: 1.85rem;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .subtitle {
+        font-size: 2.4rem;
+    }
+}
+
+.bottom-title {
+    margin: 1.5rem 0 2rem;
+}
+@media screen and (min-width: 960px) {
+    .bottom-title {
+        margin: 2rem 0 2.5rem;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .bottom-title {
+        margin: 2.5rem 0 3rem;
     }
 }
 
