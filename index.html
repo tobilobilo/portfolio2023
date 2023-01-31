@@ -142,19 +142,22 @@
         </div>
     </section>
 
-    <section class="projects padded" style="margin-bottom:1000px;">
-        <h2 class="skills__title subtitle bottom-title highlight centered" data-tofadeinX>Quelques projets personnels</h2>
+    <section class="projects padded" id="fade-trigger-0301">
+        <h2 class="skills__title subtitle bottom-title highlight centered" data-tofadein>Quelques projets personnels</h2>
         <article class="project project--scrapper">
-            <section class="project__info">
+            <section class="project__info" data-tofadein style="animation-delay:.4s;">
                 <div class="padded">
                     <h3 class="project__title">Agrégateur d'annonces Kijiji</h3>
-                    <summary class="project__summary">Application qui récupère différents flux rss provenant de Kijiji et les affiche automatique au 30 secondes.</summary>
+                    <summary class="project__summary">
+                        <p>Application qui récupère différents flux rss provenant de Kijiji et les affiche automatique au 30 secondes.</p>
+                        <p>C'est un projet que j'ai fait il y a plusieurs années et que je me sers encore aujourd'hui pour trouver des objets de seconde main ou de collection.</p>
+                    </summary>
                     
                     <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         <span role="tooltip">Voir la démo</span>
                     </a>
-                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
+                    <a href="https://github.com/tobilobilo/kijiji-scrapper" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fab fa-github" aria-hidden="true"></i>
                         <span role="tooltip">Voir sur GitHub</span>
                     </a>
@@ -165,21 +168,64 @@
                 </div>
             </section>
             <section class="project-imgs">
-                <div class="project-imgs__preview mobile" id="test2">
+                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:1.5s;">
                     <picture class="project-imgs__picture">
-                        <img src="./images/previews/kijiji_mobile.jpg" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
+                        <img src="./images/previews/scrapper/scrapper_mobile.jpg" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
                     </picture>
                 </div>
-                <div class="project-imgs__preview desktop" id="test">
+                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:1s;">
                     <picture class="project-imgs__picture">
-                        <source srcset="./images/previews/kijiji_desktop__lg.jpg" media="(min-width: 550px)">
-                        <img class="project-imgs__img" srcset="./images/previews/kijiji_desktop.jpg" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
+                        <source srcset="./images/previews/scrapper/scrapper_desktop__lg.jpg" media="(min-width: 550px)">
+                        <img class="project-imgs__img" srcset="./images/previews/scrapper/scrapper_desktop.jpg" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
                     </picture>
                 </div>
             </section>
-            <span class="trigger-parallax" id="scrapper-trigger-parallax" aria-hidden="true">&nbsp;</span>
         </article>
     </section>
+
+
+    <section class="projects padded" id="fade-trigger-0302">
+        <h2 class="project__title subtitle bottom-title highlight centered" data-tofadein>Jeux</h2>
+        <p>Développer un jeu est une bonne façon pour moi d'apprendre une nouvelle technologie. C'est un defi stimulant qui pousse à la réflexion et comprend souvent une portion algorithme pour définir une victoire.</p>
+        <article class="project project--bingo">
+            <section class="project__info" data-tofadein style="animation-delay:.4s;">
+                <div class="padded">
+                    <h3 class="project__title">Bingo</h3>
+                    <summary class="project__summary">
+                        <p>Application de jeu de Bingo avec quelques aspects paramètrables comme le nombre de joueurs et 2 types de grille sont disponible (le classique 5x5 et une version 9x9).</p>
+                        <p>Ce projet a été développé avec la version CLI de vue.js 2.</p>
+                    </summary>
+                    
+                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        <span role="tooltip">Voir la démo</span>
+                    </a>
+                    <a href="https://github.com/tobilobilo/bingo" class="project__btn show-tooltip link-hover" target="_blank">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span role="tooltip">Voir sur GitHub</span>
+                    </a>
+                    <ul class="project__stack">
+                        <li>vue.js</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="project-imgs">
+                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:1.5s;">
+                    <picture class="project-imgs__picture">
+                        <img src="./images/previews/bingo/bingo_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
+                    </picture>
+                </div>
+                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:1s;">
+                    <picture class="project-imgs__picture">
+                        <source srcset="./images/previews/bingo/bingo_desktop__lg.png" media="(min-width: 550px)">
+                        <img class="project-imgs__img" srcset="./images/previews/bingo/bingo_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
+                    </picture>
+                </div>
+            </section>
+        </article>
+    </section>
+
+
 
     <footer class="footer padded centered" id="fade-trigger-0x">
         <section class="footer__cube" data-tofadein aria-hidden="true">
@@ -214,15 +260,6 @@
     <script src="./js/scripts.js"></script>
     <script>
         var controller = new ScrollMagic.Controller();
-        // build scene
-        /*var scene = new ScrollMagic.Scene({triggerElement: "#scrapper-trigger-parallax", duration: "60%"})
-        .setTween("#test", {bottom: "1.5rem"}) // the tween durtion can be omitted and defaults to 1
-        .addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-        .addTo(controller);
-        var scene = new ScrollMagic.Scene({triggerElement: "#scrapper-trigger-parallax", duration: "45%"})
-        .setTween("#test2", {left: "0rem"}) // the tween durtion can be omitted and defaults to 1
-        .addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
-        .addTo(controller);*/
         // build scene - fade in stuff
 		new ScrollMagic.Scene({
             triggerElement: "#fade-trigger-01",
@@ -247,6 +284,32 @@
         .on("enter leave", function (e) {
             setTimeout(function() {
                 toFadeIn(document.querySelectorAll('#fade-trigger-02 [data-tofadein]'));
+            },250);
+        })
+        .addTo(controller);
+        new ScrollMagic.Scene({
+            triggerElement: "#fade-trigger-0301",
+            triggerHook: 5,
+            offset: 150, // move trigger to center of element
+            reverse: false // only do once
+        })
+        //.addIndicators() // add indicators (requires plugin)
+        .on("enter leave", function (e) {
+            setTimeout(function() {
+                toFadeIn(document.querySelectorAll('#fade-trigger-0301 [data-tofadein]'));
+            },250);
+        })
+        .addTo(controller);
+        new ScrollMagic.Scene({
+            triggerElement: "#fade-trigger-0302",
+            triggerHook: 5,
+            offset: 150, // move trigger to center of element
+            reverse: false // only do once
+        })
+        //.addIndicators() // add indicators (requires plugin)
+        .on("enter leave", function (e) {
+            setTimeout(function() {
+                toFadeIn(document.querySelectorAll('#fade-trigger-0302 [data-tofadein]'));
             },250);
         })
         .addTo(controller);
