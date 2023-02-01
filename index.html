@@ -86,7 +86,7 @@
 
     <section class="skills padded centered" id="fade-trigger-02">
         <h2 class="skills__title subtitle bottom-title highlight" data-tofadein>Mes compétences</h2>
-        <div class="skills__tables">
+        <div class="skills__tables bottom-box">
             <div class="skills__table" data-tofadein style="animation-delay:.4s;">
                 <div class="skills__logowrapper">
                     <img class="skills__logo skills__logo--smaller" src="svg/skill-html.svg" alt="HTML" aria-hidden="true">
@@ -143,8 +143,8 @@
     </section>
 
     <section class="projects padded" id="fade-trigger-0301">
-        <h2 class="skills__title subtitle bottom-title highlight centered" data-tofadein>Quelques projets personnels</h2>
-        <article class="project project--scrapper">
+        <h2 class="subtitle bottom-title highlight centered" data-tofadein>Quelques projets personnels</h2>
+        <article class="project project--scrapper bottom-box">
             <section class="project__info" data-tofadein style="animation-delay:.4s;">
                 <div class="padded">
                     <h3 class="project__title">Agrégateur d'annonces Kijiji</h3>
@@ -185,15 +185,18 @@
 
 
     <section class="projects padded" id="fade-trigger-0302">
-        <h2 class="project__title subtitle bottom-title highlight centered" data-tofadein>Jeux</h2>
-        <p>Développer un jeu est une bonne façon pour moi d'apprendre une nouvelle technologie. C'est un defi stimulant qui pousse à la réflexion et comprend souvent une portion algorithme pour définir une victoire.</p>
-        <article class="project project--bingo">
-            <section class="project__info" data-tofadein style="animation-delay:.4s;">
+        <h2 class="subtitle bottom-title highlight centered" data-tofadein>Jeux</h2>
+        <p class="project__summary project__summary--heading bottom-box" data-tofadein>Développer un jeu est une bonne façon pour moi d'apprendre une nouvelle technologie. 
+            C'est un defi stimulant qui pousse à la réflexion et comprend souvent une portion algorithme pour définir une victoire. 
+            Aussi, c'est un bon exemple de projet où le UI et le UX sont aussi important à considérer que le code derrière.
+        </p>
+        <article class="project bottom-box">
+            <section class="project__info project--bingo" data-tofadein style="animation-delay:.4s;">
                 <div class="padded">
                     <h3 class="project__title">Bingo</h3>
                     <summary class="project__summary">
                         <p>Application de jeu de Bingo avec quelques aspects paramètrables comme le nombre de joueurs et 2 types de grille sont disponible (le classique 5x5 et une version 9x9).</p>
-                        <p>Ce projet a été développé avec la version CLI de vue.js 2.</p>
+                        <p>Ce projet a été développé avec la version CLI de Vue.js 2.</p>
                     </summary>
                     
                     <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
@@ -205,7 +208,52 @@
                         <span role="tooltip">Voir sur GitHub</span>
                     </a>
                     <ul class="project__stack">
-                        <li>vue.js</li>
+                        <li>Vue.js</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="project__info project--tictactoe" data-tofadein style="animation-delay:.6s;">
+                <div class="padded">
+                    <h3 class="project__title">Tic Tac Toe</h3>
+                    <summary class="project__summary">
+                        <p>Application du classique jeu de Tic Tac Toe comprenant des fonctionnalités supplémentaires, comme la possibilité de jouer jusqu'à 4 joueurs, de nommer les joueurs et le suivis des statistiques.
+                            La grille de jeu est modifiable, allant du classique 3x3, jusqu'à 10x10.
+                        </p>
+                        <p>Ce projet a été développé avec la version pré-compilé de Vue.js 2. Il a été mon projet inaugurale sous ce framework.</p>
+                    </summary>
+                    
+                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        <span role="tooltip">Voir la démo</span>
+                    </a>
+                    <a href="https://github.com/tobilobilo/bingo" class="project__btn show-tooltip link-hover" target="_blank">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span role="tooltip">Voir sur GitHub</span>
+                    </a>
+                    <ul class="project__stack">
+                        <li>Vue.js</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="project__info project--mastermind" data-tofadein style="animation-delay:.6s;">
+                <div class="padded">
+                    <h3 class="project__title">MasterMind</h3>
+                    <summary class="project__summary">
+                        <p>Application du jeu de MasterMind. Encore une fois je lui ai ajouté des fonctionnalités supplémentaires, comme la possibilité de choisir de nombre de couleurs, de pattes et de rangés de tentative pour trouver la solution.
+                        </p>
+                        <p>Ce projet aurait idéal à développer à l'aide d'un framework javascript mais je m'étais' donné comme défi de le faire en pure javascript.</p>
+                    </summary>
+                    
+                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        <span role="tooltip">Voir la démo</span>
+                    </a>
+                    <a href="https://github.com/tobilobilo/bingo" class="project__btn show-tooltip link-hover" target="_blank">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span role="tooltip">Voir sur GitHub</span>
+                    </a>
+                    <ul class="project__stack">
+                        <li>ES6</li>
                     </ul>
                 </div>
             </section>

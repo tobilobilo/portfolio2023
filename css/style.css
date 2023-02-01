@@ -441,6 +441,9 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
     position: relative;
     transition: all 0.4s;
 }
+.projects + .projects {
+    margin-top: 4rem;
+}
 #projects-section-content {
     display: flex;
     flex-direction: row;
@@ -479,16 +482,22 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
             .project--scrapper .project__info:before {
                 background-image: url(../images/previews/scrapper/scrapper_bg.png);
             }
-            .project--bingo .project__info:before {
+            .project--bingo.project__info:before {
                 background-image: url(../images/previews/bingo/bingo_bg.png);
+            }
+            .project--tictactoe.project__info:before {
+                background-image: url(../images/previews/tictactoe/tictactoe_bg.png);
+            }
+            .project--mastermind.project__info:before {
+                background-image: url(../images/previews/mastermind/mastermind_bg.png);
             }
         .project__title {
             position: relative;
             display: block;
             color: var(--highlight-color);
+            margin: 0 0 .5rem;
             font-weight: 400;
             font-size: 1rem;
-            margin: 0 0 .5rem;
         }
         .project__summary {
             position: relative;
@@ -499,6 +508,12 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
             font-size: .88rem;
             transition: color 0.4s;
             max-width: 700px;
+        }
+        .project__summary--heading {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-top: 1rem;
         }
         .project__stack {
             position: relative;
@@ -604,6 +619,9 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
         }
     }
     @media screen and (min-width: 960px) {
+        .projects + .projects {
+            margin-top: 5rem;
+        }
         .project {
             gap: 3rem;
         }
@@ -614,12 +632,15 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
             width: 46%
         }
         .project__title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin: 0 0 1rem;
         }
         .project__summary {
             font-size: .95rem;
-            margin: 0 0 1rem;
+            margin-bottom: 1rem;
+        }
+        .project__summary--heading {
+            margin-top: 1rem;
         }
         .project__btn {
             font-size: 1.8rem;
@@ -630,8 +651,15 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
         .project--scrapper .project__info:before {
             background-image: url(../images/previews/scrapper/scrapper_bg__lg.png);
         }
-        .project--bingo .project__info:before {
+        .project--bingo.project__info:before {
             background-image: url(../images/previews/bingo/bingo_bg__lg.png);
+        }
+        }
+        .project--tictactoe.project__info:before {
+            background-image: url(../images/previews/tictactoe/tictactoe_bg__lg.png);
+        }
+        .project--mastermind.project__info:before {
+            background-image: url(../images/previews/mastermind/mastermind_bg__lg.png);
         }
     }
     @media screen and (min-width: 1440px) {
@@ -640,16 +668,22 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
         }
     }
     @media screen and (min-width: 1800px) {
+        .projects + .projects {
+            margin-top: 6rem;
+        }
         .project > section.project-imgs {
             width: 20%
         }
         .project__title {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin: 0 0 1.5rem;
         }
         .project__summary {
             font-size: 1.05rem;
-            margin: 0 0 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .project__summary--heading {
+            margin-top: 1.5rem;
         }
         .project__btn {
             font-size: 2.5rem;

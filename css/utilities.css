@@ -69,16 +69,29 @@ html.scroll-lock body {
 }
 
 .bottom-title {
-    margin: 1.5rem 0 2rem;
+    margin: 1.5rem 0 0;
 }
 @media screen and (min-width: 960px) {
     .bottom-title {
-        margin: 2rem 0 2.5rem;
+        margin: 2rem 0 0;
     }
 }
 @media screen and (min-width: 1800px) {
     .bottom-title {
-        margin: 2.5rem 0 3rem;
+        margin: 2.5rem 0 0;
+    }
+}
+.bottom-box {
+    margin-top: 2rem;
+}
+@media screen and (min-width: 960px) {
+    .bottom-box {
+        margin-top: 2.5rem;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .bottom-box {
+        margin-top: 3rem;
     }
 }
 
