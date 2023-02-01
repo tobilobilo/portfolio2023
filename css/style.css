@@ -784,6 +784,9 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
     .footer__cube {
         width: 120px;
     }
+    .footer__links {
+        gap: 4rem;
+    }
     .footer__svg {
         height: 42px;
     }
