@@ -234,6 +234,7 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
     }
     .about__contact {
         font-size: 2rem;
+        padding-top: 4rem;
     }
     .about__links a {
         margin-right: 1.25rem;
@@ -457,6 +458,12 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
         /*overflow: hidden;*/
         color: var(--font-sub-color);
         width: 100%;
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .project + .project {
+        margin-top: 3rem;
     }
         .project__info {
             background-color: var(--bg-card-color);
@@ -482,13 +489,13 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
             .project--scrapper .project__info:before {
                 background-image: url(../images/previews/scrapper/scrapper_bg.png);
             }
-            .project--bingo.project__info:before {
+            .project--bingo .project__info:before {
                 background-image: url(../images/previews/bingo/bingo_bg.png);
             }
-            .project--tictactoe.project__info:before {
+            .project--tictactoe .project__info:before {
                 background-image: url(../images/previews/tictactoe/tictactoe_bg.png);
             }
-            .project--mastermind.project__info:before {
+            .project--mastermind .project__info:before {
                 background-image: url(../images/previews/mastermind/mastermind_bg.png);
             }
         .project__title {
@@ -503,11 +510,13 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
             position: relative;
             display: block;
             color: var(--font-sub-color);
-            text-shadow: 2px 1px 3px var(--bg-card-color);
             margin: 0 0 .5rem;
             font-size: .88rem;
             transition: color 0.4s;
             max-width: 700px;
+        }
+        summary.project__summary {
+            text-shadow: 2px 1px 3px var(--bg-card-color);
         }
         .project__summary--heading {
             margin-left: auto;
@@ -597,6 +606,11 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
                 filter: grayscale(0%);
             }
 
+    @media screen and (min-width: 440px) {
+        .project-imgs__preview.mobile {
+            width: 29%;
+        }
+    }
     @media screen and (min-width: 660px) {
         .project {
             display: flex;
@@ -610,12 +624,12 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
         .project-imgs__preview.desktop {
             width: 88%;
             margin-top: 0rem;
-            padding-bottom: 3vw;
+            padding-bottom: 2rem;
         }
         .project-imgs__preview.mobile {
-            width: 30%;
-            padding-bottom: 1.8vw;
-            padding-top: 2.5vw;
+            width: 31%;
+            padding-top: 1rem;
+            padding-bottom: 1.4rem;
         }
     }
     @media screen and (min-width: 960px) {
@@ -651,20 +665,19 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
         .project--scrapper .project__info:before {
             background-image: url(../images/previews/scrapper/scrapper_bg__lg.png);
         }
-        .project--bingo.project__info:before {
+        .project--bingo .project__info:before {
             background-image: url(../images/previews/bingo/bingo_bg__lg.png);
         }
-        }
-        .project--tictactoe.project__info:before {
+        .project--tictactoe .project__info:before {
             background-image: url(../images/previews/tictactoe/tictactoe_bg__lg.png);
         }
-        .project--mastermind.project__info:before {
+        .project--mastermind .project__info:before {
             background-image: url(../images/previews/mastermind/mastermind_bg__lg.png);
         }
     }
     @media screen and (min-width: 1440px) {
         .project > section.project-imgs {
-            width: 30%
+            width: 35%
         }
     }
     @media screen and (min-width: 1800px) {
@@ -672,7 +685,7 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
             margin-top: 6rem;
         }
         .project > section.project-imgs {
-            width: 20%
+            
         }
         .project__title {
             font-size: 1.6rem;

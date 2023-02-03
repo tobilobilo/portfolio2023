@@ -66,7 +66,7 @@
         <section class="about" data-tofadein>
             <h1 class="about__tile">Jean-Pierre Rose</h1>
             <h2 class="about__subtitle subtitle highlight">Développeur web front-end</h2>
-            <p class="about__desc">Je developpe et intègre des interfaces pour des sites et application web. Mon rôle est de créer une <span class="highlight">expérience utilisateur</span> irréprochable en livrant des produits <span class="highlight">accessibles</span>.</p>
+            <p class="about__desc">Je developpe et intègre des interfaces pour des sites et application web. Mon rôle est de créer des produits <span class="highlight">accessibles</span> tout en offrant une excellente <span class="highlight">expérience utilisateur</span>.</p>
             <h3 class="about__contact">Prenez contact!</h3>
             <div class="about__links">
                 <a class="about__link about__link--email link-hover" href="mailto:jiprose@gmail.com" aria-label="Couriel"><img src="svg/icon-email.svg" class="about__svg" alt="Logo couriel"></a>
@@ -79,12 +79,15 @@
         </section>
         </section>
     </main>
-    <section class="more padded" id="fade-trigger-01">
+    <section class="more padded" id="fade-trigger-01" data-fade-trigger>
         <h2 class="more__title subtitle highlight" data-tofadein>Un peu plus sur moi</h2>
-        <p class="more__par" data-tofadein style="animation-delay:.5s;">Après avoir gradué en multimédia en 2010, mon chemin s'est orienté dans le développement web front-end. J'ai travaillé sur un grands types de projets web; site webs grand publique, applications internes d'entreprise, infolettres, intranets.</p>
+        <div data-tofadein style="animation-delay:.5s;">
+            <p class="more__par">Après avoir gradué en multimédia en 2010, mon chemin s'est orienté dans le développement web front-end. J'ai travaillé sur un grands types de projets web tel que site webs grand publique, applications corporatives internes, infolettres, intranets, placement publicitaire, concours et lecteurs medias.</p>
+            <p class="more__par">Dans ma vie comme dans mon travail, je suis quelqu'un d'organisé qui a un soucis du détail. J'ai tendance à voir le bon côté des choses et de garder la tête froide.</p>
+        </div>
     </section>
 
-    <section class="skills padded centered" id="fade-trigger-02">
+    <section class="skills padded centered" id="fade-trigger-02" data-fade-trigger>
         <h2 class="skills__title subtitle bottom-title highlight" data-tofadein>Mes compétences</h2>
         <div class="skills__tables bottom-box">
             <div class="skills__table" data-tofadein style="animation-delay:.4s;">
@@ -142,7 +145,7 @@
         </div>
     </section>
 
-    <section class="projects padded" id="fade-trigger-0301">
+    <section class="projects padded" id="fade-trigger-0301" data-fade-trigger>
         <h2 class="subtitle bottom-title highlight centered" data-tofadein>Quelques projets personnels</h2>
         <article class="project project--scrapper bottom-box">
             <section class="project__info" data-tofadein style="animation-delay:.4s;">
@@ -184,14 +187,16 @@
     </section>
 
 
-    <section class="projects padded" id="fade-trigger-0302">
-        <h2 class="subtitle bottom-title highlight centered" data-tofadein>Jeux</h2>
-        <p class="project__summary project__summary--heading bottom-box" data-tofadein>Développer un jeu est une bonne façon pour moi d'apprendre une nouvelle technologie. 
-            C'est un defi stimulant qui pousse à la réflexion et comprend souvent une portion algorithme pour définir une victoire. 
-            Aussi, c'est un bon exemple de projet où le UI et le UX sont aussi important à considérer que le code derrière.
-        </p>
-        <article class="project bottom-box">
-            <section class="project__info project--bingo" data-tofadein style="animation-delay:.4s;">
+    <section class="projects padded">
+        <div id="fade-trigger-0401" data-fade-trigger>
+            <h2 class="subtitle bottom-title highlight centered" data-tofadein>Jeux</h2>
+            <p class="project__summary project__summary--heading bottom-box" data-tofadein>Développer un jeu est une bonne façon pour moi d'apprendre une nouvelle technologie. 
+                C'est un defi stimulant qui pousse à la réflexion et comprend souvent une portion algorithme pour définir une victoire. 
+                Aussi, c'est un bon exemple de projet où le UI et le UX sont aussi important à considérer que le code derrière.
+            </p>
+        </div>
+        <article class="project bottom-box project--bingo" id="fade-trigger-0402" data-fade-trigger>
+            <section class="project__info" data-tofadein>
                 <div class="padded">
                     <h3 class="project__title">Bingo</h3>
                     <summary class="project__summary">
@@ -212,7 +217,22 @@
                     </ul>
                 </div>
             </section>
-            <section class="project__info project--tictactoe" data-tofadein style="animation-delay:.6s;">
+            <section class="project-imgs">
+                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
+                    <picture class="project-imgs__picture">
+                        <img src="./images/previews/bingo/bingo_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
+                    </picture>
+                </div>
+                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
+                    <picture class="project-imgs__picture">
+                        <source srcset="./images/previews/bingo/bingo_desktop__lg.png" media="(min-width: 550px)">
+                        <img class="project-imgs__img" srcset="./images/previews/bingo/bingo_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
+                    </picture>
+                </div>
+            </section>
+        </article>
+        <article class="project bottom-box project--tictactoe" id="fade-trigger-0403" data-fade-trigger>
+            <section class="project__info" data-tofadein>
                 <div class="padded">
                     <h3 class="project__title">Tic Tac Toe</h3>
                     <summary class="project__summary">
@@ -226,7 +246,7 @@
                         <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         <span role="tooltip">Voir la démo</span>
                     </a>
-                    <a href="https://github.com/tobilobilo/bingo" class="project__btn show-tooltip link-hover" target="_blank">
+                    <a href="https://github.com/tobilobilo/tic-tac-toe" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fab fa-github" aria-hidden="true"></i>
                         <span role="tooltip">Voir sur GitHub</span>
                     </a>
@@ -235,7 +255,22 @@
                     </ul>
                 </div>
             </section>
-            <section class="project__info project--mastermind" data-tofadein style="animation-delay:.6s;">
+            <section class="project-imgs">
+                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
+                    <picture class="project-imgs__picture">
+                        <img src="./images/previews/tictactoe/tictactoe_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
+                    </picture>
+                </div>
+                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
+                    <picture class="project-imgs__picture">
+                        <source srcset="./images/previews/tictactoe/tictactoe_desktop__lg.png" media="(min-width: 550px)">
+                        <img class="project-imgs__img" srcset="./images/previews/tictactoe/tictactoe_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
+                    </picture>
+                </div>
+            </section>
+        </article>
+        <article class="project bottom-box project--mastermind" id="fade-trigger-0404" data-fade-trigger>
+            <section class="project__info" data-tofadein>
                 <div class="padded">
                     <h3 class="project__title">MasterMind</h3>
                     <summary class="project__summary">
@@ -248,7 +283,7 @@
                         <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         <span role="tooltip">Voir la démo</span>
                     </a>
-                    <a href="https://github.com/tobilobilo/bingo" class="project__btn show-tooltip link-hover" target="_blank">
+                    <a href="https://github.com/tobilobilo/mastermind" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fab fa-github" aria-hidden="true"></i>
                         <span role="tooltip">Voir sur GitHub</span>
                     </a>
@@ -258,24 +293,22 @@
                 </div>
             </section>
             <section class="project-imgs">
-                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:1.5s;">
+                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
                     <picture class="project-imgs__picture">
-                        <img src="./images/previews/bingo/bingo_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
+                        <img src="./images/previews/mastermind/mastermind_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
                     </picture>
                 </div>
-                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:1s;">
+                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
                     <picture class="project-imgs__picture">
-                        <source srcset="./images/previews/bingo/bingo_desktop__lg.png" media="(min-width: 550px)">
-                        <img class="project-imgs__img" srcset="./images/previews/bingo/bingo_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
+                        <source srcset="./images/previews/mastermind/mastermind_desktop__lg.png" media="(min-width: 550px)">
+                        <img class="project-imgs__img" srcset="./images/previews/mastermind/mastermind_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
                     </picture>
                 </div>
             </section>
         </article>
     </section>
 
-
-
-    <footer class="footer padded centered" id="fade-trigger-0x">
+    <footer class="footer padded centered" id="fade-trigger-0x" data-fade-trigger>
         <section class="footer__cube" data-tofadein aria-hidden="true">
             <img src="svg/cube2.svg" class="footer__cubeimg" alt="Cube">
             <div class="footer__cubeshadow"></div>
@@ -306,74 +339,5 @@
 	<script type="text/javascript" src="/js/lib/animation.gsap.js"></script>
 	<script type="text/javascript" src="/js/lib/debug.addIndicators.js"></script>
     <script src="./js/scripts.js"></script>
-    <script>
-        var controller = new ScrollMagic.Controller();
-        // build scene - fade in stuff
-		new ScrollMagic.Scene({
-            triggerElement: "#fade-trigger-01",
-            triggerHook: .9,
-            offset: 130, // move trigger to center of element
-            reverse: false // only do once
-        })
-        //.addIndicators() // add indicators (requires plugin)
-        .on("enter leave", function (e) {
-            setTimeout(function() {
-                toFadeIn(document.querySelectorAll('#fade-trigger-01 [data-tofadein]'));
-            },250);
-        })
-        .addTo(controller);
-        new ScrollMagic.Scene({
-            triggerElement: "#fade-trigger-02",
-            triggerHook: 5,
-            offset: 150, // move trigger to center of element
-            reverse: false // only do once
-        })
-        //.addIndicators() // add indicators (requires plugin)
-        .on("enter leave", function (e) {
-            setTimeout(function() {
-                toFadeIn(document.querySelectorAll('#fade-trigger-02 [data-tofadein]'));
-            },250);
-        })
-        .addTo(controller);
-        new ScrollMagic.Scene({
-            triggerElement: "#fade-trigger-0301",
-            triggerHook: 5,
-            offset: 150, // move trigger to center of element
-            reverse: false // only do once
-        })
-        //.addIndicators() // add indicators (requires plugin)
-        .on("enter leave", function (e) {
-            setTimeout(function() {
-                toFadeIn(document.querySelectorAll('#fade-trigger-0301 [data-tofadein]'));
-            },250);
-        })
-        .addTo(controller);
-        new ScrollMagic.Scene({
-            triggerElement: "#fade-trigger-0302",
-            triggerHook: 5,
-            offset: 150, // move trigger to center of element
-            reverse: false // only do once
-        })
-        //.addIndicators() // add indicators (requires plugin)
-        .on("enter leave", function (e) {
-            setTimeout(function() {
-                toFadeIn(document.querySelectorAll('#fade-trigger-0302 [data-tofadein]'));
-            },250);
-        })
-        .addTo(controller);
-        new ScrollMagic.Scene({
-            triggerElement: "#fade-trigger-0x",
-            triggerHook: 5,
-            offset: 150, // move trigger to center of element
-            reverse: false // only do once
-        })
-        //.addIndicators() // add indicators (requires plugin)
-        .on("enter leave", function (e) {
-            setTimeout(function() {
-                toFadeIn(document.querySelectorAll('#fade-trigger-0x [data-tofadein]'));
-            },250);
-        })
-        .addTo(controller);
-    </script>
 </body>
 </html>

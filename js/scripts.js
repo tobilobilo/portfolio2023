@@ -11,6 +11,30 @@ const initFade = setInterval( () => {
     }
 }, 500);
 
+
+/*
+
+*/
+var controller = new ScrollMagic.Controller();
+document.querySelectorAll('[data-fade-trigger]').forEach((el) => {
+    const id = el.getAttribute('id');
+    // build scene - fade in stuff
+    new ScrollMagic.Scene({
+        triggerElement: `#${id}`,
+        triggerHook: .9,
+        offset: 150, // move trigger to center of element
+        reverse: false // only do once
+    })
+    //.addIndicators() // add indicators (requires plugin)
+    .on("enter leave", function (e) {
+        setTimeout(function() {
+            toFadeIn(document.querySelectorAll(`#${id} [data-tofadein]`));
+        },250);
+    })
+    .addTo(controller);
+});
+
+
 /*
     Event Listeners    
 */
