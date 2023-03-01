@@ -13,3 +13,9 @@
     --shadow-color: rgba(0,0,0,0.25);
 }
 
+[data-theme="light"] .project-imgs__img {
+    opacity: .5;
+}
+[data-theme="light"] .project__info:before {
+    opacity: .2;
+}

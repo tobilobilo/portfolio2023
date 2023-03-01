@@ -99,7 +99,7 @@
                     <ul class="skills__list">
                         <li class="skills__item">Sémantique</li>
                         <li class="skills__item">Accessibilité</li>
-                        <li class="skills__item">Bootstrap</li>
+                        <li class="skills__item">Twig</li>
                     </ul>
                 </div>
             </div>
@@ -110,8 +110,8 @@
                 <div class="skills__texts">
                     <h3 class="skills__subtitle ">CSS</h3>
                     <ul class="skills__list">
-                        <li class="skills__item">SASS</li>
-                        <li class="skills__item">LESS</li>
+                        <li class="skills__item">SASS / LESS</li>
+                        <li class="skills__item">Bootstrap</li>
                         <li class="skills__item">BEM</li>
                     </ul>
                 </div>
@@ -124,8 +124,8 @@
                     <h3 class="skills__subtitle ">Javascript</h3>
                     <ul class="skills__list">
                         <li class="skills__item">ES6+</li>
+                        <li class="skills__item">Vue.js</li>
                         <li class="skills__item">jQuery</li>
-                        <li class="skills__item">vue.js</li>
                     </ul>
                 </div>
             </div>
@@ -138,7 +138,20 @@
                     <ul class="skills__list">
                         <li class="skills__item">Photoshop</li>
                         <li class="skills__item">Illustrator</li>
-                        <li class="skills__item">Chart</li>
+                        <li class="skills__item">Figma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills__table" data-tofadein style="animation-delay:1s;">
+                <div class="skills__logowrapper">
+                    <img class="skills__logo skills__logo--smaller" src="svg/skill-toolbox.svg" alt="Outils" aria-hidden="true">
+                </div>
+                <div class="skills__texts">
+                    <h3 class="skills__subtitle ">Outils</h3>
+                    <ul class="skills__list">
+                        <li class="skills__item">Git</li>
+                        <li class="skills__item">Drupal</li>
+                        <li class="skills__item">Wordpress</li>
                     </ul>
                 </div>
             </div>
@@ -147,6 +160,79 @@
 
     <section class="projects padded" id="fade-trigger-0301" data-fade-trigger>
         <h2 class="subtitle bottom-title highlight centered" data-tofadein>Quelques projets personnels</h2>
+        <article class="project bottom-box project--mastermind" id="fade-trigger-0404" data-fade-trigger>
+            <section class="project__info" data-tofadein>
+                <div class="padded">
+                    <h3 class="project__title">MasterMind</h3>
+                    <summary class="project__summary">
+                        <p>Application du jeu de MasterMind où encore une fois j'ai ajouté des fonctionnalités supplémentaires, comme la possibilité de choisir de nombre de couleurs, de pattes et de rangés de tentative pour trouver la solution.
+                        </p>
+                        <p>Ce projet aurait idéal à développer à l'aide d'un framework javascript mais je m'étais donné comme défi de le faire en pure javascript.</p>
+                    </summary>
+                    
+                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        <span role="tooltip">Voir la démo</span>
+                    </a>
+                    <a href="https://github.com/tobilobilo/mastermind" class="project__btn show-tooltip link-hover" target="_blank">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span role="tooltip">Voir sur GitHub</span>
+                    </a>
+                    <ul class="project__stack">
+                        <li>ES6</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="project-imgs">
+                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
+                    <picture class="project-imgs__picture">
+                        <img src="./images/previews/mastermind/mastermind_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
+                    </picture>
+                </div>
+                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
+                    <picture class="project-imgs__picture">
+                        <source srcset="./images/previews/mastermind/mastermind_desktop__lg.png" media="(min-width: 550px)">
+                        <img class="project-imgs__img" srcset="./images/previews/mastermind/mastermind_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
+                    </picture>
+                </div>
+            </section>
+        </article>
+        <article class="project bottom-box project--bingo" id="fade-trigger-0402" data-fade-trigger>
+            <section class="project__info" data-tofadein>
+                <div class="padded">
+                    <h3 class="project__title">Bingo</h3>
+                    <summary class="project__summary">
+                        <p>Application de jeu de Bingo avec quelques aspects paramètrables comme le nombre de joueurs et 2 types de grille sont disponible (le classique 5x5 et une version 9x9).</p>
+                        <p>Ce projet a été développé avec la version CLI de Vue.js 2.</p>
+                    </summary>
+                    
+                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        <span role="tooltip">Voir la démo</span>
+                    </a>
+                    <a href="https://github.com/tobilobilo/bingo" class="project__btn show-tooltip link-hover" target="_blank">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span role="tooltip">Voir sur GitHub</span>
+                    </a>
+                    <ul class="project__stack">
+                        <li>Vue.js</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="project-imgs">
+                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
+                    <picture class="project-imgs__picture">
+                        <img src="./images/previews/bingo/bingo_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
+                    </picture>
+                </div>
+                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
+                    <picture class="project-imgs__picture">
+                        <source srcset="./images/previews/bingo/bingo_desktop__lg.png" media="(min-width: 550px)">
+                        <img class="project-imgs__img" srcset="./images/previews/bingo/bingo_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
+                    </picture>
+                </div>
+            </section>
+        </article>
         <article class="project project--scrapper bottom-box">
             <section class="project__info" data-tofadein style="animation-delay:.4s;">
                 <div class="padded">
@@ -180,53 +266,6 @@
                     <picture class="project-imgs__picture">
                         <source srcset="./images/previews/scrapper/scrapper_desktop__lg.jpg" media="(min-width: 550px)">
                         <img class="project-imgs__img" srcset="./images/previews/scrapper/scrapper_desktop.jpg" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
-                    </picture>
-                </div>
-            </section>
-        </article>
-    </section>
-
-
-    <section class="projects padded">
-        <div id="fade-trigger-0401" data-fade-trigger>
-            <h2 class="subtitle bottom-title highlight centered" data-tofadein>Jeux</h2>
-            <p class="project__summary project__summary--heading bottom-box" data-tofadein>Développer un jeu est une bonne façon pour moi d'apprendre une nouvelle technologie. 
-                C'est un defi stimulant qui pousse à la réflexion et comprend souvent une portion algorithme pour définir une victoire. 
-                Aussi, c'est un bon exemple de projet où le UI et le UX sont aussi important à considérer que le code derrière.
-            </p>
-        </div>
-        <article class="project bottom-box project--bingo" id="fade-trigger-0402" data-fade-trigger>
-            <section class="project__info" data-tofadein>
-                <div class="padded">
-                    <h3 class="project__title">Bingo</h3>
-                    <summary class="project__summary">
-                        <p>Application de jeu de Bingo avec quelques aspects paramètrables comme le nombre de joueurs et 2 types de grille sont disponible (le classique 5x5 et une version 9x9).</p>
-                        <p>Ce projet a été développé avec la version CLI de Vue.js 2.</p>
-                    </summary>
-                    
-                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        <span role="tooltip">Voir la démo</span>
-                    </a>
-                    <a href="https://github.com/tobilobilo/bingo" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        <span role="tooltip">Voir sur GitHub</span>
-                    </a>
-                    <ul class="project__stack">
-                        <li>Vue.js</li>
-                    </ul>
-                </div>
-            </section>
-            <section class="project-imgs">
-                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
-                    <picture class="project-imgs__picture">
-                        <img src="./images/previews/bingo/bingo_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
-                    </picture>
-                </div>
-                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
-                    <picture class="project-imgs__picture">
-                        <source srcset="./images/previews/bingo/bingo_desktop__lg.png" media="(min-width: 550px)">
-                        <img class="project-imgs__img" srcset="./images/previews/bingo/bingo_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
                     </picture>
                 </div>
             </section>
@@ -265,43 +304,6 @@
                     <picture class="project-imgs__picture">
                         <source srcset="./images/previews/tictactoe/tictactoe_desktop__lg.png" media="(min-width: 550px)">
                         <img class="project-imgs__img" srcset="./images/previews/tictactoe/tictactoe_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
-                    </picture>
-                </div>
-            </section>
-        </article>
-        <article class="project bottom-box project--mastermind" id="fade-trigger-0404" data-fade-trigger>
-            <section class="project__info" data-tofadein>
-                <div class="padded">
-                    <h3 class="project__title">MasterMind</h3>
-                    <summary class="project__summary">
-                        <p>Application du jeu de MasterMind où encore une fois j'ai ajouté des fonctionnalités supplémentaires, comme la possibilité de choisir de nombre de couleurs, de pattes et de rangés de tentative pour trouver la solution.
-                        </p>
-                        <p>Ce projet aurait idéal à développer à l'aide d'un framework javascript mais je m'étais donné comme défi de le faire en pure javascript.</p>
-                    </summary>
-                    
-                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        <span role="tooltip">Voir la démo</span>
-                    </a>
-                    <a href="https://github.com/tobilobilo/mastermind" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        <span role="tooltip">Voir sur GitHub</span>
-                    </a>
-                    <ul class="project__stack">
-                        <li>ES6</li>
-                    </ul>
-                </div>
-            </section>
-            <section class="project-imgs">
-                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
-                    <picture class="project-imgs__picture">
-                        <img src="./images/previews/mastermind/mastermind_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
-                    </picture>
-                </div>
-                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
-                    <picture class="project-imgs__picture">
-                        <source srcset="./images/previews/mastermind/mastermind_desktop__lg.png" media="(min-width: 550px)">
-                        <img class="project-imgs__img" srcset="./images/previews/mastermind/mastermind_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
                     </picture>
                 </div>
             </section>
