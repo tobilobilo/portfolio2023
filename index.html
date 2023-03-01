@@ -2,8 +2,8 @@
 <html data-theme="dark" class="scroll-lock">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jean-Pierre Rose - Développeur web front-end</title>
-    <meta name="description" content="Jean-Pierre Rose - Développeur Web Front-End"/>
+    <title>Jean-Pierre Rose - Développeur web front-end dans la région de Montréal</title>
+    <meta name="description" content="Je developpe et intègre des interfaces pour des sites et applications web. Je crée des produits accessibles et performants tout en offrant une excellente expérience utilisateur."/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/utilities.css?v.1.0.1">
     <link rel="stylesheet" href="./css/loader.css?v.1.0.1">
@@ -18,9 +18,9 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body> 
-    <section class="loader" id="loader" aria-hidden="true" style="opacity:0;"> <!-- retirer opacity 0 avant mise en ligne pour afficher le loader -->
+    <section class="loader" id="loader" aria-hidden="true"> <!-- retirer opacity 0 avant mise en ligne pour afficher le loader -->
         <div class="loader-content" id="loader-content">
-            <img src="svg/logo.svg" class="loader__logo" alt="Logo Jean-Pierre Rose, développeur web front-end">
+            <img src="./svg/logo-jpr.svg" class="loader__logo" alt="Logo Jean-Pierre Rose, développeur web front-end">
             <div class="loader__cube">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
@@ -66,7 +66,7 @@
         <section class="about" data-tofadein>
             <h1 class="about__tile">Jean-Pierre Rose</h1>
             <h2 class="about__subtitle subtitle highlight">Développeur web front-end</h2>
-            <p class="about__desc">Je developpe et intègre des interfaces pour des sites et application web. Mon rôle est de créer des produits <span class="highlight">accessibles</span> tout en offrant une excellente <span class="highlight">expérience utilisateur</span>.</p>
+            <p class="about__desc">Je developpe et intègre des interfaces pour des sites et application web. Mon rôle est de créer des produits <span class="highlight">accessibles</span> et <span class="highlight">performants</span> tout en offrant une excellente <span class="highlight">expérience utilisateur</span>.</p>
             <h3 class="about__contact">Prenez contact!</h3>
             <div class="about__links">
                 <a class="about__link about__link--email link-hover" href="mailto:jiprose@gmail.com" aria-label="Couriel"><img src="svg/icon-email.svg" class="about__svg" alt="Logo couriel"></a>
@@ -82,7 +82,8 @@
     <section class="more padded" id="fade-trigger-01" data-fade-trigger>
         <h2 class="more__title subtitle highlight" data-tofadein>Un peu plus sur moi</h2>
         <div data-tofadein style="animation-delay:.5s;">
-            <p class="more__par">Après avoir gradué en multimédia en 2010, mon chemin s'est orienté dans le développement web front-end. J'ai travaillé sur un grands types de projets web tel que site webs grand publique, applications corporatives internes, infolettres, intranets, placement publicitaire, concours et lecteurs medias.</p>
+            <p class="more__par">Après avoir gradué en multimédia en 2010, mon chemin s'est orienté dans le développement web front-end. Fraichement diplomé, j'ai été engagé chez Groupe TVA en tant qu'intégrateur web.</p>
+            <p class="more__par">Durant mon parcours de près de 13 ans au Groupe TVA, j'ai pu travailler sur un grand éventail de projets web tel que site webs grand publique, applications corporatives internes, infolettres, intranets, placement publicitaire, concours et lecteurs medias.</p>
             <p class="more__par">Dans ma vie comme dans mon travail, je suis quelqu'un d'organisé qui a un soucis du détail. J'ai tendance à voir le bon côté des choses et de garder la tête froide.</p>
         </div>
     </section>
@@ -144,7 +145,7 @@
             </div>
             <div class="skills__table" data-tofadein style="animation-delay:1s;">
                 <div class="skills__logowrapper">
-                    <img class="skills__logo skills__logo--smaller" src="svg/skill-toolbox.svg" alt="Outils" aria-hidden="true">
+                    <img class="skills__logo" src="svg/skill-toolbox.svg" alt="Outils" aria-hidden="true">
                 </div>
                 <div class="skills__texts">
                     <h3 class="skills__subtitle ">Outils</h3>
@@ -158,9 +159,11 @@
         </div>
     </section>
 
-    <section class="projects padded" id="fade-trigger-0301" data-fade-trigger>
-        <h2 class="subtitle bottom-title highlight centered" data-tofadein>Quelques projets personnels</h2>
-        <article class="project bottom-box project--mastermind" id="fade-trigger-0404" data-fade-trigger>
+    <section class="projects padded">
+        <div id="fade-trigger-03" data-fade-trigger>
+            <h2 class="subtitle bottom-title highlight centered" data-tofadein>Quelques projets personnels</h2>
+        </div>
+        <article class="project bottom-box project--mastermind" id="fade-trigger-0301" data-fade-trigger>
             <section class="project__info" data-tofadein>
                 <div class="padded">
                     <h3 class="project__title">MasterMind</h3>
@@ -170,7 +173,7 @@
                         <p>Ce projet aurait idéal à développer à l'aide d'un framework javascript mais je m'étais donné comme défi de le faire en pure javascript.</p>
                     </summary>
                     
-                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
+                    <a href="https://tobilobilo.github.io/mastermind/" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         <span role="tooltip">Voir la démo</span>
                     </a>
@@ -197,7 +200,7 @@
                 </div>
             </section>
         </article>
-        <article class="project bottom-box project--bingo" id="fade-trigger-0402" data-fade-trigger>
+        <article class="project bottom-box project--bingo" id="fade-trigger-0302" data-fade-trigger>
             <section class="project__info" data-tofadein>
                 <div class="padded">
                     <h3 class="project__title">Bingo</h3>
@@ -206,7 +209,7 @@
                         <p>Ce projet a été développé avec la version CLI de Vue.js 2.</p>
                     </summary>
                     
-                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
+                    <a href="https://tobilobilo.github.io/bingo/" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         <span role="tooltip">Voir la démo</span>
                     </a>
@@ -233,8 +236,8 @@
                 </div>
             </section>
         </article>
-        <article class="project project--scrapper bottom-box">
-            <section class="project__info" data-tofadein style="animation-delay:.4s;">
+        <article class="project project--scrapper bottom-box" id="fade-trigger-0303" data-fade-trigger>
+            <section class="project__info" data-tofadein>
                 <div class="padded">
                     <h3 class="project__title">Agrégateur d'annonces Kijiji</h3>
                     <summary class="project__summary">
@@ -242,7 +245,7 @@
                         <p>C'est un projet que j'ai fait il y a plusieurs années et que je me sers encore aujourd'hui pour trouver des objets de seconde main ou de collection.</p>
                     </summary>
                     
-                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
+                    <a href="http://mads.epizy.com/?p=demo" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         <span role="tooltip">Voir la démo</span>
                     </a>
@@ -257,12 +260,12 @@
                 </div>
             </section>
             <section class="project-imgs">
-                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:1.5s;">
+                <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
                     <picture class="project-imgs__picture">
                         <img src="./images/previews/scrapper/scrapper_mobile.jpg" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
                     </picture>
                 </div>
-                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:1s;">
+                <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
                     <picture class="project-imgs__picture">
                         <source srcset="./images/previews/scrapper/scrapper_desktop__lg.jpg" media="(min-width: 550px)">
                         <img class="project-imgs__img" srcset="./images/previews/scrapper/scrapper_desktop.jpg" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
@@ -270,7 +273,7 @@
                 </div>
             </section>
         </article>
-        <article class="project bottom-box project--tictactoe" id="fade-trigger-0403" data-fade-trigger>
+        <article class="project bottom-box project--tictactoe" id="fade-trigger-0304" data-fade-trigger>
             <section class="project__info" data-tofadein>
                 <div class="padded">
                     <h3 class="project__title">Tic Tac Toe</h3>
@@ -281,7 +284,7 @@
                         <p>Ce projet a été développé avec la version pré-compilé de Vue.js 2. Il a été mon projet inaugurale sous ce framework.</p>
                     </summary>
                     
-                    <a href="#" class="project__btn show-tooltip link-hover" target="_blank">
+                    <a href="https://tobilobilo.github.io/tic-tac-toe/" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
                         <span role="tooltip">Voir la démo</span>
                     </a>
@@ -315,31 +318,31 @@
             <img src="svg/cube2.svg" class="footer__cubeimg" alt="Cube">
             <div class="footer__cubeshadow"></div>
         </section>
-        <ul class="footer__links" data-tofadein style="animation-delay:.4s;">
-            <li class="footer__item">
+        <ul class="footer__links">
+            <li class="footer__item" data-tofadein style="animation-delay:.4s;">
                 <a class="footer__link footer__link--email link-hover" href="mailto:jiprose@gmail.com" aria-label="Couriel">
                     <img src="svg/icon-email.svg" class="footer__svg" alt="Logo couriel">
                 </a>
             </li>
-            <li class="footer__item">
+            <li class="footer__item" data-tofadein style="animation-delay:.52s;">
                 <a class="footer__link footer__link--linkedin link-hover" href="https://www.linkedin.com/in/jean-pierre-rose/" target="_blank" aria-label="LinkedIn">
                     <img src="svg/icon-linkedin.svg" class="footer__svg" alt="Logo linkedin">
                 </a>
             </li>
-            <li class="footer__item">
+            <li class="footer__item" data-tofadein style="animation-delay:.64s;">
                 <a class="footer__link footer__link--github link-hover" href="https://github.com/tobilobilo" target="_blank" aria-label="github">
                     <img src="svg/icon-github.svg" class="footer__svg" alt="Logo github">
                 </a>
             </li>
         </ul>
-        <address class="footer__author" data-tofadein style="animation-delay:.8s;">Jean-Pierre Rose</address>
-        <time class="footer__date" data-tofadein style="animation-delay:.8s;">2023</time>
+        <address class="footer__author" data-tofadein style="animation-delay:1s;">Jean-Pierre Rose</address>
+        <time class="footer__date" data-tofadein style="animation-delay:1s;">2023</time>
     </footer>
 
-    <script type="text/javascript" src="/js/lib/TweenMax.min.js"></script>
-	<script type="text/javascript" src="/js/lib/ScrollMagic.js"></script>
-	<script type="text/javascript" src="/js/lib/animation.gsap.js"></script>
-	<script type="text/javascript" src="/js/lib/debug.addIndicators.js"></script>
+    <script type="text/javascript" src="./js/lib/TweenMax.min.js"></script>
+	<script type="text/javascript" src="./js/lib/ScrollMagic.js"></script>
+	<script type="text/javascript" src="./js/lib/animation.gsap.js"></script>
+	<script type="text/javascript" src="./js/lib/debug.addIndicators.js"></script>
     <script src="./js/scripts.js"></script>
 </body>
 </html>

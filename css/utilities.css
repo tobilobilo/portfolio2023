@@ -17,7 +17,7 @@ html.scroll-lock body {
 }
 @keyframes fadein {
     from {
-        transform: translateY(1.5rem);
+        transform: translateY(3.5rem);
         opacity: 0;
     }
     to {

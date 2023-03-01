@@ -15,7 +15,7 @@ const initFade = setInterval( () => {
 /*
 
 */
-var controller = new ScrollMagic.Controller();
+const controller = new ScrollMagic.Controller();
 document.querySelectorAll('[data-fade-trigger]').forEach((el) => {
     const id = el.getAttribute('id');
     // build scene - fade in stuff
@@ -29,10 +29,16 @@ document.querySelectorAll('[data-fade-trigger]').forEach((el) => {
     .on("enter leave", function (e) {
         setTimeout(function() {
             toFadeIn(document.querySelectorAll(`#${id} [data-tofadein]`));
-        },250);
+        }, 250);
     })
     .addTo(controller);
 });
+
+function toFadeIn(elements) {
+    elements.forEach(element => {
+        element.setAttribute("data-fadedin", "");
+    });
+}
 
 
 /*
@@ -44,11 +50,3 @@ document.querySelector('#switch-theme').addEventListener('change', (e) => {
     document.documentElement.setAttribute('data-theme', (e.target.checked) ? 'dark' : 'light');
     document.querySelector('#switch-label-1').textContent = document.querySelector('#switch-label-1').getAttribute((e.target.checked) ? 'data-text-off' : 'data-text-on');
 });
-
-
-
-function toFadeIn(elements) {
-    elements.forEach(element => {
-        element.setAttribute("data-fadedin", "");
-    });
-}
