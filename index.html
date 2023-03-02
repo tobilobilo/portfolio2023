@@ -39,17 +39,8 @@
         </div>
     </section>
     <header class="header padded">
-        <!--nav>
-            <ul>
-                <li></li>
-            </ul>
-        </nav-->
         <div class="header__ctas">
             <img src="svg/logo-jpr.svg" class="header__logo" alt="Logo Jean-Pierre Rose, développeur web front-end">
-            <!--div class="header__links">
-                <a class="header__link header__link--email link-hover" href="mailto:jiprose@gmail.com" aria-label="Couriel"><img src="svg/email.svg" class="header__svg" alt="Logo couriel"></a>
-                <a class="header__link header__link--linkedin link-hover" href="https://www.linkedin.com/in/jean-pierre-rose/" target="_blank"><img src="svg/linkedin.svg" class="header__svg" alt="Logo LinkedIn"></a>
-            </div-->
         </div>
         <div class="theme-toggler">
             <label class="show-tooltip" role="switch" aria-labelledby="switch-label-1">
@@ -58,7 +49,7 @@
                     <i class="fas fa-sun" data-element="theme-light-icon" aria-label="Thème clair"></i>
                     <i class="fas fa-moon" data-element="theme-dark-icon" aria-label="Thème sombre"></i>
                 </span>
-                <span role="tooltip" class="tooltip-middle-left" id="switch-label-1" data-text-on="Activer le mode sombre" data-text-off="Déactiver le mode sombre">Déactiver le mode sombre</span>
+                <!--span role="tooltip" class="tooltip-middle-left" id="switch-label-1" data-text-on="Activer le mode sombre" data-text-off="Déactiver le mode sombre">Déactiver le mode sombre</span-->
             </label>
         </div>
     </header>
@@ -82,7 +73,7 @@
     <section class="more padded" id="fade-trigger-01" data-fade-trigger>
         <h2 class="more__title subtitle highlight" data-tofadein>Un peu plus sur moi</h2>
         <div data-tofadein style="animation-delay:.5s;">
-            <p class="more__par">Après avoir gradué en multimédia en 2010, mon chemin s'est orienté dans le développement web front-end. Fraichement diplomé, j'ai été engagé chez Groupe TVA en tant qu'intégrateur web.</p>
+            <p class="more__par">Après avoir gradué en multimédia en 2010, mon chemin s'est orienté dans le développement web front-end. Fraîchement diplomé, j'ai été engagé chez Groupe TVA en tant qu'intégrateur web.</p>
             <p class="more__par">Durant mon parcours de près de 13 ans au Groupe TVA, j'ai pu travailler sur un grand éventail de projets web tel que site webs grand publique, applications corporatives internes, infolettres, intranets, placement publicitaire, concours et lecteurs medias.</p>
             <p class="more__par">Dans ma vie comme dans mon travail, je suis quelqu'un d'organisé qui a un soucis du détail. J'ai tendance à voir le bon côté des choses et de garder la tête froide.</p>
         </div>
@@ -96,7 +87,7 @@
                     <img class="skills__logo skills__logo--smaller" src="svg/skill-html.svg" alt="HTML" aria-hidden="true">
                 </div>
                 <div class="skills__texts">
-                    <h3 class="skills__subtitle ">HTML</h3>
+                    <h3 class="skills__subtitle">HTML</h3>
                     <ul class="skills__list">
                         <li class="skills__item">Sémantique</li>
                         <li class="skills__item">Accessibilité</li>
@@ -109,7 +100,7 @@
                     <img class="skills__logo skills__logo--smaller" src="svg/skill-css.svg" alt="CSS" aria-hidden="true">
                 </div>
                 <div class="skills__texts">
-                    <h3 class="skills__subtitle ">CSS</h3>
+                    <h3 class="skills__subtitle">CSS</h3>
                     <ul class="skills__list">
                         <li class="skills__item">SASS / LESS</li>
                         <li class="skills__item">Bootstrap</li>
@@ -122,7 +113,7 @@
                     <img class="skills__logo" src="svg/skill-js.svg" alt="Javascript" aria-hidden="true">
                 </div>
                 <div class="skills__texts">
-                    <h3 class="skills__subtitle ">Javascript</h3>
+                    <h3 class="skills__subtitle">Javascript</h3>
                     <ul class="skills__list">
                         <li class="skills__item">ES6+</li>
                         <li class="skills__item">Vue.js</li>
@@ -135,7 +126,7 @@
                     <img class="skills__logo" src="svg/skill-window.svg" alt="UI / UX" aria-hidden="true">
                 </div>
                 <div class="skills__texts">
-                    <h3 class="skills__subtitle ">UI / UX</h3>
+                    <h3 class="skills__subtitle">UI / UX</h3>
                     <ul class="skills__list">
                         <li class="skills__item">Photoshop</li>
                         <li class="skills__item">Illustrator</li>
@@ -148,7 +139,7 @@
                     <img class="skills__logo" src="svg/skill-toolbox.svg" alt="Outils" aria-hidden="true">
                 </div>
                 <div class="skills__texts">
-                    <h3 class="skills__subtitle ">Outils</h3>
+                    <h3 class="skills__subtitle">Outils</h3>
                     <ul class="skills__list">
                         <li class="skills__item">Git</li>
                         <li class="skills__item">Drupal</li>
@@ -163,23 +154,24 @@
         <div id="fade-trigger-03" data-fade-trigger>
             <h2 class="subtitle bottom-title highlight centered" data-tofadein>Quelques projets personnels</h2>
         </div>
+        <div class="projects__wrapper">
         <article class="project bottom-box project--mastermind" id="fade-trigger-0301" data-fade-trigger>
             <section class="project__info" data-tofadein>
                 <div class="padded">
                     <h3 class="project__title">MasterMind</h3>
                     <summary class="project__summary">
-                        <p>Application du jeu de MasterMind où encore une fois j'ai ajouté des fonctionnalités supplémentaires, comme la possibilité de choisir de nombre de couleurs, de pattes et de rangés de tentative pour trouver la solution.
+                        <p>Application du jeu de MasterMind comprenant des fonctionnalités supplémentaires, comme la possibilité de choisir de nombre de couleurs, de pattes et de rangés de combinaisons pour trouver la solution.
                         </p>
                         <p>Ce projet aurait idéal à développer à l'aide d'un framework javascript mais je m'étais donné comme défi de le faire en pure javascript.</p>
                     </summary>
                     
                     <a href="https://tobilobilo.github.io/mastermind/" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        <span role="tooltip">Voir la démo</span>
+                        <!--span role="tooltip">Voir la démo</span-->
                     </a>
                     <a href="https://github.com/tobilobilo/mastermind" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fab fa-github" aria-hidden="true"></i>
-                        <span role="tooltip">Voir sur GitHub</span>
+                        <!--span role="tooltip">Voir sur GitHub</span-->
                     </a>
                     <ul class="project__stack">
                         <li>ES6</li>
@@ -211,14 +203,15 @@
                     
                     <a href="https://tobilobilo.github.io/bingo/" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        <span role="tooltip">Voir la démo</span>
+                        <!--span role="tooltip">Voir la démo</span-->
                     </a>
                     <a href="https://github.com/tobilobilo/bingo" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fab fa-github" aria-hidden="true"></i>
-                        <span role="tooltip">Voir sur GitHub</span>
+                        <!--span role="tooltip">Voir sur GitHub</span-->
                     </a>
                     <ul class="project__stack">
                         <li>Vue.js</li>
+                        <li>Bootstrap</li>
                     </ul>
                 </div>
             </section>
@@ -247,11 +240,11 @@
                     
                     <a href="http://mads.epizy.com/?p=demo" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        <span role="tooltip">Voir la démo</span>
+                        <!--span role="tooltip">Voir la démo</span-->
                     </a>
                     <a href="https://github.com/tobilobilo/kijiji-scrapper" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fab fa-github" aria-hidden="true"></i>
-                        <span role="tooltip">Voir sur GitHub</span>
+                        <!--span role="tooltip">Voir sur GitHub</span-->
                     </a>
                     <ul class="project__stack">
                         <li>jQuery</li>
@@ -286,14 +279,15 @@
                     
                     <a href="https://tobilobilo.github.io/tic-tac-toe/" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        <span role="tooltip">Voir la démo</span>
+                        <!--span role="tooltip">Voir la démo</span-->
                     </a>
                     <a href="https://github.com/tobilobilo/tic-tac-toe" class="project__btn show-tooltip link-hover" target="_blank">
                         <i class="fab fa-github" aria-hidden="true"></i>
-                        <span role="tooltip">Voir sur GitHub</span>
+                        <!--span role="tooltip">Voir sur GitHub</span-->
                     </a>
                     <ul class="project__stack">
                         <li>Vue.js</li>
+                        <li>Bootstrap</li>
                     </ul>
                 </div>
             </section>
@@ -311,6 +305,7 @@
                 </div>
             </section>
         </article>
+        </div>
     </section>
 
     <footer class="footer padded centered" id="fade-trigger-0x" data-fade-trigger>

@@ -1,9 +1,8 @@
 html.scroll-lock, 
 html.scroll-lock body {
-    overflow: hidden;
-}
-html.scroll-lock body {
-    position: fixed;
+    margin: 0;
+    height: 100%;
+    overflow: auto
 }
 
 [data-tofadein] {
@@ -48,14 +47,14 @@ html.scroll-lock body {
     }
 }
 .centered {
-    text-align: center;
+    text-align: center; 
     margin-left: auto;
     margin-right: auto;
 }
 
 .subtitle {
     font-weight: 400;
-    font-size: 1.15rem;
+    font-size: 1.20rem;
 }
 @media screen and (min-width: 960px) {
     .subtitle {

@@ -14,6 +14,9 @@
 .loader-content {
     animation: loaderScaleOut .65s ease-in-out 5.5s 1 forwards;
 }
+.short-intro .loader-content {
+    display: none;
+}
 
 @keyframes loaderFadeOut {
     0% {
