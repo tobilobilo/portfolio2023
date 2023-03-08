@@ -442,9 +442,10 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
 .projects {
     position: relative;
     transition: all 0.4s;
+    margin-top: 1rem;
 }
 .projects + .projects {
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 #projects-section-content {
     display: flex;
@@ -469,6 +470,12 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
         .project__info {
             background-color: var(--bg-card-color);
             position: relative;
+        }
+        .project__wrapper {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            height: 100%;
         }
             .project__info:before {
                 content: "";
@@ -499,6 +506,12 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
             .project--mastermind .project__info:before {
                 background-image: url(../images/previews/mastermind/mastermind_bg.png);
             }
+            .project--mels .project__info:before {
+                background-image: url(../images/previews/mels/mels_bg.jpg);
+            }
+            .project--groupetva .project__info:before {
+                background-image: url(../images/previews/groupetva/groupetva_bg.jpg);
+            }
         .project__title {
             position: relative;
             display: block;
@@ -511,13 +524,16 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
             position: relative;
             display: block;
             color: var(--font-sub-color);
-            margin: 0 0 .5rem;
+            margin: 0 0 0;
             font-size: .95rem;
             transition: color 0.4s;
             max-width: 700px;
         }
         summary.project__summary {
             text-shadow: 2px 1px 3px var(--bg-card-color);
+        }
+        .project__summary p {
+            margin-top: 0;
         }
         .project__summary--heading {
             margin-left: auto;
@@ -534,7 +550,7 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
             padding: 0;
             align-items: center;
             list-style: none;
-            margin: 0 0 .5rem;
+            margin: auto 0 0;
             font-size: .75rem;
             font-family: 'Roboto Mono', monospace;
             opacity: .7;
@@ -652,7 +668,7 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
         }
         .project__summary {
             font-size: .95rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0;
         }
         .project__summary--heading {
             margin-top: 1rem;
@@ -674,6 +690,12 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
         }
         .project--mastermind .project__info:before {
             background-image: url(../images/previews/mastermind/mastermind_bg__lg.png);
+        }
+        .project--mels .project__info:before {
+            background-image: url(../images/previews/mels/mels_bg__lg.jpg);
+        }
+        .project--groupetva .project__info:before {
+            background-image: url(../images/previews/groupetva/groupetva_bg__lg.jpg);
         }
     }
     @media screen and (min-width: 1440px) {

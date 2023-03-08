@@ -151,28 +151,105 @@
     </section>
 
     <section class="projects padded">
+        <div id="fade-trigger-04" data-fade-trigger>
+            <h2 class="subtitle bottom-title highlight centered" data-tofadein>Quelques projets professionnels</h2>
+        </div>
+        <div class="projects__wrapper">
+            <article class="project bottom-box project--mels" id="fade-trigger-0401" data-fade-trigger>
+                <section class="project__info" data-tofadein>
+                    <div class="project__wrapper padded">
+                        <h3 class="project__title">Studios MELS</h3>
+                        <summary class="project__summary">
+                            <p>Site web corporatif des Studios MELS développé sous Wordpress.
+                            </p>
+                            <p>Reconnue mondialement pour ses studios de tournage et sa main d'œuvre hautement qualifiée, MELS est l'une des plus grandes entreprises de services de 
+                                cinéma et de télévision au Canada. Elle propose un service clé en main, du scénario à la livraison.</p>
+                        </summary>
+                        <div class="project__btns">
+                            <a href="https://www.mels-studios.com/fr/" class="project__btn show-tooltip link-hover" target="_blank">
+                                <i class="fas fa-arrow-up-right-from-square" aria-label="Voir le site"></i>
+                            </a>
+                        </div>
+                        <ul class="project__stack">
+                            <li>Wordpress</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="project-imgs">
+                    <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
+                        <picture class="project-imgs__picture">
+                            <img src="./images/previews/mels/mels_mobile.jpg" alt="Aperçu du projet 'Studios MELS' sur un mobile." class="project-imgs__img">
+                        </picture>
+                    </div>
+                    <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
+                        <picture class="project-imgs__picture">
+                            <source srcset="./images/previews/mels/mels_desktop__lg.jpg" media="(min-width: 550px)">
+                            <img class="project-imgs__img" srcset="./images/previews/mels/mels_desktop.jpg" alt="Aperçu du projet 'Studios MELS' sur un moniteur.">
+                        </picture>
+                    </div>
+                </section>
+            </article>
+            <article class="project bottom-box project--groupetva" id="fade-trigger-0402" data-fade-trigger>
+                <section class="project__info" data-tofadein>
+                    <div class="project__wrapper padded">
+                        <h3 class="project__title">Groupe TVA</h3>
+                        <summary class="project__summary">
+                            <p>Site web corporatif du Groupe TVA développé sous Drupal.
+                            </p>
+                            <p>Groupe TVA est une entreprise québécoise active dans les domaines de la télévision, du film et des magazines. Elle est une propriété de Québecor Média. 
+                                Les principaux actifs de l'entreprise incluent le réseau TVA ainsi que six de ses dix stations régionales et des chaînes spécialisées.</p>
+                        </summary>
+                        <div class="project__btns">
+                            <a href="https://www.groupetva.ca/" class="project__btn show-tooltip link-hover" target="_blank">
+                                <i class="fas fa-arrow-up-right-from-square" aria-label="Voir le site"></i>
+                            </a>
+                        </div>
+                        <ul class="project__stack">
+                            <li>Drupal</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="project-imgs">
+                    <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
+                        <picture class="project-imgs__picture">
+                            <img src="./images/previews/groupetva/groupetva_mobile.jpg" alt="Aperçu du projet 'Groupe TVA' sur un mobile." class="project-imgs__img">
+                        </picture>
+                    </div>
+                    <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
+                        <picture class="project-imgs__picture">
+                            <source srcset="./images/previews/groupetva/groupetva_desktop__lg.jpg" media="(min-width: 550px)">
+                            <img class="project-imgs__img" srcset="./images/previews/groupetva/groupetva_desktop.jpg" alt="Aperçu du projet 'Groupe TVA' sur un moniteur.">
+                        </picture>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </section>
+
+    <section class="projects padded">
         <div id="fade-trigger-03" data-fade-trigger>
             <h2 class="subtitle bottom-title highlight centered" data-tofadein>Quelques projets personnels</h2>
         </div>
         <div class="projects__wrapper">
         <article class="project bottom-box project--mastermind" id="fade-trigger-0301" data-fade-trigger>
             <section class="project__info" data-tofadein>
-                <div class="padded">
+                <div class="project__wrapper padded">
                     <h3 class="project__title">Mastermind</h3>
                     <summary class="project__summary">
                         <p>Application du jeu <em>Mastermind</em> comprenant des fonctionnalités supplémentaires, comme la possibilité de choisir le nombre de couleurs, de colonnes et de rangées de combinaisons pour trouver la solution.
                         </p>
                         <p>Ce projet aurait été idéal à développer à l'aide d'un framework, mais je m'étais donné comme défi de le faire en pur Javascript</p>
                     </summary>
-                    
-                    <a href="https://tobilobilo.github.io/mastermind/" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        <!--span role="tooltip">Voir la démo</span-->
-                    </a>
-                    <a href="https://github.com/tobilobilo/mastermind" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        <!--span role="tooltip">Voir sur GitHub</span-->
-                    </a>
+                    <div class="project__btns">
+                        <a href="https://tobilobilo.github.io/mastermind/" class="project__btn show-tooltip link-hover" target="_blank">
+                            <i class="fas fa-arrow-up-right-from-square" aria-label="Voir le projet"></i>
+                            <!--span role="tooltip">Voir la démo</span-->
+                        </a>
+                        <a href="https://github.com/tobilobilo/mastermind" class="project__btn show-tooltip link-hover" target="_blank">
+                            <i class="fab fa-github" aria-label="Voir sur GitHub"></i>
+                            <!--span role="tooltip">Voir sur GitHub</span-->
+                        </a>
+                    </div>
                     <ul class="project__stack">
                         <li>ES6</li>
                     </ul>
@@ -181,34 +258,35 @@
             <section class="project-imgs">
                 <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
                     <picture class="project-imgs__picture">
-                        <img src="./images/previews/mastermind/mastermind_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
+                        <img src="./images/previews/mastermind/mastermind_mobile.png" alt="Aperçu du projet 'Mastermind' sur un mobile." class="project-imgs__img">
                     </picture>
                 </div>
                 <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
                     <picture class="project-imgs__picture">
                         <source srcset="./images/previews/mastermind/mastermind_desktop__lg.png" media="(min-width: 550px)">
-                        <img class="project-imgs__img" srcset="./images/previews/mastermind/mastermind_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
+                        <img class="project-imgs__img" srcset="./images/previews/mastermind/mastermind_desktop.png" alt="Aperçu du projet 'Mastermind' sur un moniteur.">
                     </picture>
                 </div>
             </section>
         </article>
         <article class="project bottom-box project--bingo" id="fade-trigger-0302" data-fade-trigger>
             <section class="project__info" data-tofadein>
-                <div class="padded">
+                <div class="project__wrapper padded">
                     <h3 class="project__title">Bingo</h3>
                     <summary class="project__summary">
                         <p>Application du jeu de <em>Bingo</em> avec quelques aspects paramétrables tels que : le nombre de joueurs et le type de grilles. Deux choix de grilles sont disponibles (le classique 5x5 et une version 9x9).</p>
                         <p>Ce projet a été développé avec la version CLI de Vue.js 2.</p>
                     </summary>
-                    
-                    <a href="https://tobilobilo.github.io/bingo/" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        <!--span role="tooltip">Voir la démo</span-->
-                    </a>
-                    <a href="https://github.com/tobilobilo/bingo" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        <!--span role="tooltip">Voir sur GitHub</span-->
-                    </a>
+                    <div class="project__btns">
+                        <a href="https://tobilobilo.github.io/bingo/" class="project__btn show-tooltip link-hover" target="_blank">
+                            <i class="fas fa-arrow-up-right-from-square" aria-label="Voir le projet"></i>
+                            <!--span role="tooltip">Voir la démo</span-->
+                        </a>
+                        <a href="https://github.com/tobilobilo/bingo" class="project__btn show-tooltip link-hover" target="_blank">
+                            <i class="fab fa-github" aria-label="Voir sur GitHub"></i>
+                            <!--span role="tooltip">Voir sur GitHub</span-->
+                        </a>
+                    </div>
                     <ul class="project__stack">
                         <li>Vue.js</li>
                         <li>Bootstrap</li>
@@ -218,34 +296,35 @@
             <section class="project-imgs">
                 <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
                     <picture class="project-imgs__picture">
-                        <img src="./images/previews/bingo/bingo_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
+                        <img src="./images/previews/bingo/bingo_mobile.png" alt="Aperçu du projet 'Bingo' sur un mobile." class="project-imgs__img">
                     </picture>
                 </div>
                 <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
                     <picture class="project-imgs__picture">
                         <source srcset="./images/previews/bingo/bingo_desktop__lg.png" media="(min-width: 550px)">
-                        <img class="project-imgs__img" srcset="./images/previews/bingo/bingo_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
+                        <img class="project-imgs__img" srcset="./images/previews/bingo/bingo_desktop.png" alt="Aperçu du projet 'Bingo' sur un moniteur.">
                     </picture>
                 </div>
             </section>
         </article>
         <article class="project project--scrapper bottom-box" id="fade-trigger-0303" data-fade-trigger>
             <section class="project__info" data-tofadein>
-                <div class="padded">
+                <div class="project__wrapper padded">
                     <h3 class="project__title">Agrégateur d'annonces Kijiji</h3>
                     <summary class="project__summary">
                         <p>Application qui récupère différents flux RSS provenant de Kijiji et les affiches automatiques aux 30 secondes.</p>
                         <p>C'est un projet que j'ai développé, il y a plusieurs années et dont je me sers encore fréquemment pour trouver des objets de seconde main ou de collection.</p>
                     </summary>
-                    
-                    <a href="http://mads.epizy.com/?p=demo" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        <!--span role="tooltip">Voir la démo</span-->
-                    </a>
-                    <a href="https://github.com/tobilobilo/kijiji-scrapper" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        <!--span role="tooltip">Voir sur GitHub</span-->
-                    </a>
+                    <div class="project__btns">
+                        <a href="http://mads.epizy.com/?p=demo" class="project__btn show-tooltip link-hover" target="_blank">
+                            <i class="fas fa-arrow-up-right-from-square" aria-label="Voir le projet"></i>
+                            <!--span role="tooltip">Voir la démo</span-->
+                        </a>
+                        <a href="https://github.com/tobilobilo/kijiji-scrapper" class="project__btn show-tooltip link-hover" target="_blank">
+                            <i class="fab fa-github" aria-label="Voir sur GitHub"></i>
+                            <!--span role="tooltip">Voir sur GitHub</span-->
+                        </a>
+                    </div>
                     <ul class="project__stack">
                         <li>jQuery</li>
                         <li>PHP</li>
@@ -268,21 +347,22 @@
         </article>
         <article class="project bottom-box project--tictactoe" id="fade-trigger-0304" data-fade-trigger>
             <section class="project__info" data-tofadein>
-                <div class="padded">
+                <div class="project__wrapper padded">
                     <h3 class="project__title">Tic Tac Toe</h3>
                     <summary class="project__summary">
                         <p>Application du jeu classique <em>Tic Tac Toe</em> comprenant des fonctionnalités supplémentaires, telles que : la possibilité de jouer jusqu'à 4 joueurs, de nommer les joueurs et d'assurer le suivi des statistiques. La grille de jeu est modifiable, allant du classique 3x3 jusqu'à 10x10.</p>
                         <p>Ce projet a été développé avec la version précompilée de Vue.js 2. Il a été mon projet initial sous ce framework.</p>
                     </summary>
-                    
-                    <a href="https://tobilobilo.github.io/tic-tac-toe/" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                        <!--span role="tooltip">Voir la démo</span-->
-                    </a>
-                    <a href="https://github.com/tobilobilo/tic-tac-toe" class="project__btn show-tooltip link-hover" target="_blank">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                        <!--span role="tooltip">Voir sur GitHub</span-->
-                    </a>
+                    <div class="project__btns">
+                        <a href="https://tobilobilo.github.io/tic-tac-toe/" class="project__btn show-tooltip link-hover" target="_blank">
+                            <i class="fas fa-arrow-up-right-from-square" aria-label="Voir le projet"></i>
+                            <!--span role="tooltip">Voir la démo</span-->
+                        </a>
+                        <a href="https://github.com/tobilobilo/tic-tac-toe" class="project__btn show-tooltip link-hover" target="_blank">
+                            <i class="fab fa-github" aria-label="Voir sur GitHub"></i>
+                            <!--span role="tooltip">Voir sur GitHub</span-->
+                        </a>
+                    </div>
                     <ul class="project__stack">
                         <li>Vue.js</li>
                         <li>Bootstrap</li>
@@ -292,13 +372,13 @@
             <section class="project-imgs">
                 <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
                     <picture class="project-imgs__picture">
-                        <img src="./images/previews/tictactoe/tictactoe_mobile.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un mobile." class="project-imgs__img">
+                        <img src="./images/previews/tictactoe/tictactoe_mobile.png" alt="Aperçu du projet 'Tic Tac Toe' sur un mobile." class="project-imgs__img">
                     </picture>
                 </div>
                 <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
                     <picture class="project-imgs__picture">
                         <source srcset="./images/previews/tictactoe/tictactoe_desktop__lg.png" media="(min-width: 550px)">
-                        <img class="project-imgs__img" srcset="./images/previews/tictactoe/tictactoe_desktop.png" alt="Aperçu du projet 'Agrégateur d'annonces Kijiji' sur un moniteur.">
+                        <img class="project-imgs__img" srcset="./images/previews/tictactoe/tictactoe_desktop.png" alt="Aperçu du projet 'Tic Tac Toe' sur un moniteur.">
                     </picture>
                 </div>
             </section>
