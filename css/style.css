@@ -717,7 +717,7 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
         }
         .project__summary {
             font-size: 1.05rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0;
         }
         .project__summary--heading {
             margin-top: 1.5rem;
