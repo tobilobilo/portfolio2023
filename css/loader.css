@@ -8,14 +8,27 @@
     left: 0;
     right: 0;
     z-index: 999;
+}
 
-    animation: loaderFadeOut .5s ease 5.9s 1 forwards;
+@media (prefers-reduced-motion: no-preference) {
+    .loader {
+        animation: loaderFadeOut .5s ease 5.9s 1 forwards;
+    }
+    .loader-content {
+        animation: loaderScaleOut .65s ease-in-out 5.5s 1 forwards;
+    }
+    .short-intro .loader-content {
+        display: none;
+    }
 }
-.loader-content {
-    animation: loaderScaleOut .65s ease-in-out 5.5s 1 forwards;
-}
-.short-intro .loader-content {
-    display: none;
+
+@media (prefers-reduced-motion: reduce) {
+    .loader {
+        animation: loaderFadeOut .5s ease .9s 1 forwards;
+    }
+    .loader-content {
+        display: none;
+    }
 }
 
 @keyframes loaderFadeOut {
@@ -53,6 +66,13 @@
     animation-fill-mode: forwards;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .loader__logo {
+        opacity: 1;
+        animation-duration: 0s;
+    }
+}
+
 @keyframes logofadein {
     from {
         transform: translateY(-1rem);
@@ -71,6 +91,7 @@
 .loader__cube svg {
     overflow: visible;
 }
+@media (prefers-reduced-motion: no-preference) {
 .loader__cube .st2 {
     opacity: 0;
     transform: translateY(-.5rem);
@@ -85,6 +106,7 @@
     opacity: 0;
     transform: translateY(.5rem) translateX(-.5rem);
     animation: loaderfadein .8s ease 3s 1 forwards, translateSt0 .6s ease 4s 1 forwards;;
+}
 }
 
 @keyframes loaderfadein {

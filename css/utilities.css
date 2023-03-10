@@ -5,23 +5,25 @@ html.scroll-lock body {
     overflow: auto
 }
 
-[data-tofadein] {
-    opacity: 0;
-}
-[data-fadedin] {
-    animation-name: fadein;
-    animation-duration: .6s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-@keyframes fadein {
-    from {
-        transform: translateY(3.5rem);
+@media (prefers-reduced-motion: no-preference) {
+    [data-tofadein] {
         opacity: 0;
     }
-    to {
-        transform: translateY(0rem);
-        opacity: 1;
+    [data-fadedin] {
+        animation-name: fadein;
+        animation-duration: .6s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadein {
+        from {
+            transform: translateY(3.5rem);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0rem);
+            opacity: 1;
+        }
     }
 }
 

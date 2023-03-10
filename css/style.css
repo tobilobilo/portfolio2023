@@ -75,6 +75,13 @@ img, video {
     gap: .25rem;
     height: 100%;
 }
+[role="switch"] [type="checkbox"]:checked + .switch:after {
+    transform: translateX(100%);
+}
+[role="switch"] [type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
 [role="switch"] .switch {
     position: relative;
     display: inline-flex;
@@ -84,6 +91,7 @@ img, video {
     border: 2px solid transparent;
     transition: all 0.4s;
 }
+[role="switch"] input[type="checkbox"]:focus + .switch,
 [role="switch"] .switch:hover {
     border-color: var(--highlight-color);
 }
@@ -100,6 +108,7 @@ img, video {
     box-sizing: border-box;
     transition: all 0.4s;
 }
+
 [role="switch"] .switch i {
     display: flex;
     width: 28px;
@@ -128,12 +137,12 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
     opacity: 1;
     color: var(--highlight-color);
 }
-[role="switch"] [type="checkbox"]:checked + .switch:after {
-    transform: translateX(100%);
-}
-[role="switch"] [type="checkbox"] {
-    position: absolute;
-    visibility: hidden;
+
+[data-event="mailto"] {
+    padding: 0;
+    background: none;
+    border: 0 none; 
+    cursor: pointer;
 }
 
 
@@ -186,6 +195,9 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
 }
 .about__links {
     margin: .8rem 0 0;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
 }
 .about__links a {
     margin-right: .75rem;
@@ -216,6 +228,9 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
     }
     .about__svg {
         height: 35px;
+    }
+    .about__links {
+        gap: 1.5rem;
     }
     .about__link--email .about__svg {
         height: 31px;
@@ -259,23 +274,34 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
     width: 160px;
     height: 160px;
     z-index: 1;
-    animation-name: cubefloating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-    -webkit-backface-visibility: hidden;
 }
 .animation__shadow {
     width: 130px;
     height: 130px;
     border-radius: 150px;
     background-color: var(--bg-card-color);
-    animation-name: floatingshadow;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    .animation__shadow {
+        transform: rotateX(59deg) scale(.85) translateY(-7rem);
+    }
+}
+@media (prefers-reduced-motion: no-preference) {
+    .animation__cube {
+        animation-name: cubefloating;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        -webkit-backface-visibility: hidden;
+    }
+    .animation__shadow {
+        animation-name: floatingshadow;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
 }
 @media screen and (min-width: 960px) {
     .animation__cube {
@@ -477,7 +503,7 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
             justify-content: flex-start;
             height: 100%;
         }
-            .project__info:before {
+            .project__preview {
                 content: "";
                 position: absolute;
                 top: 0;
@@ -485,6 +511,7 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
                 display: block;
                 width: 60%;
                 height: 100%;
+                overflow: hidden;
                 z-index: 0;
                 
                 background-position: 0 0;
@@ -494,24 +521,19 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
                 -webkit-mask-image: linear-gradient(to right, transparent 0%, black 75%);
                 mask-image: linear-gradient(to right, transparent 0%, black 75%);
             }
-            .project--scrapper .project__info:before {
-                background-image: url(../images/previews/scrapper/scrapper_bg.png);
-            }
-            .project--bingo .project__info:before {
-                background-image: url(../images/previews/bingo/bingo_bg.png);
-            }
-            .project--tictactoe .project__info:before {
-                background-image: url(../images/previews/tictactoe/tictactoe_bg.png);
-            }
-            .project--mastermind .project__info:before {
-                background-image: url(../images/previews/mastermind/mastermind_bg.png);
-            }
-            .project--mels .project__info:before {
-                background-image: url(../images/previews/mels/mels_bg.jpg);
-            }
-            .project--groupetva .project__info:before {
-                background-image: url(../images/previews/groupetva/groupetva_bg.jpg);
-            }
+                .project-preview__picture {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                    .project-preview__img {
+                        position: absolute;
+                        display: block;
+                        min-width: initial;
+                        min-height: 100%;
+                        max-width: inherit;
+                    }
         .project__title {
             position: relative;
             display: block;
@@ -638,6 +660,10 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
             flex-grow: 1;
             flex-basis: 0;
         }
+        .project-preview__img {
+            transform-origin: top left;
+            transform: scale(.56);
+        }
         .project-imgs__preview.desktop {
             width: 88%;
             margin-top: 0rem;
@@ -676,26 +702,8 @@ html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"
         .project__btn {
             font-size: 1.8rem;
         }
-        .project__info:before {
-            background-size: 150%;
-        }
-        .project--scrapper .project__info:before {
-            background-image: url(../images/previews/scrapper/scrapper_bg__lg.png);
-        }
-        .project--bingo .project__info:before {
-            background-image: url(../images/previews/bingo/bingo_bg__lg.png);
-        }
-        .project--tictactoe .project__info:before {
-            background-image: url(../images/previews/tictactoe/tictactoe_bg__lg.png);
-        }
-        .project--mastermind .project__info:before {
-            background-image: url(../images/previews/mastermind/mastermind_bg__lg.png);
-        }
-        .project--mels .project__info:before {
-            background-image: url(../images/previews/mels/mels_bg__lg.jpg);
-        }
-        .project--groupetva .project__info:before {
-            background-image: url(../images/previews/groupetva/groupetva_bg__lg.jpg);
+        .project-preview__img {
+            transform: scale(.66);
         }
     }
     @media screen and (min-width: 1440px) {
