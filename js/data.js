@@ -3,13 +3,13 @@ const skills = {
         'icon': 'svg/skill-html.svg',
         'subskills': ['Sémantique', 'Accessibilité', 'Twig'],
         'animationdelay': '.4s',
-        'extraclass': 'skills_logo--smaller'
+        'extraclass': 'skills__logo--smaller'
     },
     'CSS': {
         'icon': 'svg/skill-css.svg',
         'subskills': ['SASS / LESS', 'Bootstrap', 'BEM'],
         'animationdelay': '.55s',
-        'extraclass': 'skills_logo--smaller'
+        'extraclass': 'skills__logo--smaller'
     },
     'Javascript': {
         'icon': 'svg/skill-js.svg',

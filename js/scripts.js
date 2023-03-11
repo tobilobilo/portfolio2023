@@ -115,6 +115,38 @@ document.querySelectorAll('[data-event="mailto"]').forEach( item => {
 /*
     Append content from templates
 */
+function templater({task, element, text, attribute, css, template, parent}) {
+    if(Array.isArray(text) === true) { // check if multiple elements need to be added to the DOM
+        const arrayTexts = Array.from(text);
+        for(let el in arrayTexts) {
+            const item = template.content.cloneNode(true);
+            parent.append(item);
+            text = arrayTexts[el];
+            element = parent.lastChild;
+            templater({task, element, text, attribute, css});
+        }
+    }
+    switch(task) {
+        case ("innerText"):
+            element.innerText = text;
+            break;
+        case ("setAttribute"):
+            if(!text) {
+                element.remove();
+                break;
+            }
+            element.setAttribute(attribute, text);
+            break;
+        case ("classListAdd"):
+            element.classList.add(text);
+            break;
+        case ("style"):
+            element.style.setProperty(css, text);
+            break;
+        default:
+            break;
+    }
+}
 function appendTemplateElements() {
     //Skills
     const wrapperSkills = document.querySelector('[data-element="skills"]');
@@ -122,18 +154,41 @@ function appendTemplateElements() {
     for(let skill in skills) {
         const templateSkill = document.querySelector('[data-template="skill"]');
         const content = templateSkill.content.cloneNode(true);
-        content.querySelector('.skills__subtitle').innerText = skill;
-        content.querySelector('.skills__logo').setAttribute('alt', skill);
-        content.querySelector('.skills__logo').setAttribute('src', skills[skill].icon);
-        content.querySelector('.skills__logo').classList.add(skills[skill].extraclass);
-        content.querySelector('.skills__table').style.animationDelay = skills[skill].animationdelay;
-        const skillsList = content.querySelector('.skills__list');
-        const templateSkillItem = content.querySelector('[data-template="skill-item"]');
-        for(let subskill in skills[skill].subskills) {
-            const item = templateSkillItem.content.cloneNode(true);
-            item.querySelector('.skills__item').innerText = skills[skill].subskills[subskill];
-            skillsList.append(item);
-        }
+        templater({
+            "task" : "innerText",
+            "element" : content.querySelector('.skills__subtitle'),
+            "text" : skill
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.skills__logo'),
+            "attribute" : 'alt',
+            "text" : skill
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.skills__logo'),
+            "attribute" : 'src',
+            "text" : skills[skill].icon
+        });
+        templater({
+            "task" : "classListAdd",
+            "element" : content.querySelector('.skills__logo'),
+            "text" : skills[skill].extraclass
+        });
+        templater({
+            "task" : "style",
+            "element" : content.querySelector('.skills__table'),
+            "css" : "animation-delay",
+            "text" : skills[skill].animationdelay
+        });
+        templater({
+            "task" : "innerText",
+            "element" : null,
+            "text" : skills[skill].subskills,
+            "template" : content.querySelector('[data-template="skill-item"]'),
+            "parent" : content.querySelector('.skills__list')
+        });
         fragmentSkills.append(content);
     }
     wrapperSkills.append(fragmentSkills);
@@ -146,42 +201,103 @@ function appendTemplateElements() {
     for(let project in projects) {
         const templateProject = document.querySelector('[data-template="project"]');
         const content = templateProject.content.cloneNode(true);
-        content.querySelector('.project__title').innerText = project;
-        content.querySelector('.project').id = `fade-trigger-${projects[project].type}-${Object.keys(projects).indexOf(project)}`;
-        const btnDemo = content.querySelector('.project__btn--demo');
-        (projects[project].links.demo) ? btnDemo.setAttribute('href', projects[project].links.demo) : btnDemo.remove();
-        const btnGithub = content.querySelector('.project__btn--github');
-        (projects[project].links.github) ? btnGithub.setAttribute('href', projects[project].links.github) : btnGithub.remove();
-        const previewMobile = content.querySelector('.project-imgs__preview.mobile .project-imgs__img');
-        previewMobile.setAttribute('src', projects[project].imgs.mobile);
-        previewMobile.setAttribute('alt', previewMobile.getAttribute('alt').replace('%%', project));
-        const imgDesktop = content.querySelector('.project-imgs__preview.desktop .project-imgs__img');
-        const imgDesktopLarge = content.querySelector('.project-imgs__preview.desktop source');
-        imgDesktop.setAttribute('src', projects[project].imgs.desktop.small);
-        imgDesktopLarge.setAttribute('srcset', projects[project].imgs.desktop.large);
-        imgDesktop.setAttribute('alt', imgDesktop.getAttribute('alt').replace('%%', project));
-        const previewDesktop = content.querySelector('.project-preview__picture .project-preview__img');
-        const previewDesktopLarge = content.querySelector('.project-preview__picture source');
-        previewDesktop.setAttribute('src', projects[project].imgs.preview.small);
-        previewDesktopLarge.setAttribute('srcset', projects[project].imgs.preview.large);
-        previewDesktop.setAttribute('alt', previewDesktop.getAttribute('alt').replace('%%', project));
-        //content.querySelector('.skills__logo').setAttribute('src', projects[project].icon);
-        //content.querySelector('.skills__logo').classList.add(projects[project].extraclass);
-        //content.querySelector('.skills__table').style.animationDelay = projects[project].animationdelay;
-        const projectsStacks = content.querySelector('.project__stack');
-        const templateStack = content.querySelector('[data-template="project-stack"]');
-        for(let tech in projects[project].stack) {
-            const item = templateStack.content.cloneNode(true);
-            item.querySelector('li').innerText = projects[project].stack[tech];
-            projectsStacks.append(item);
-        }
-        const projectsPars = content.querySelector('.project__summary');
-        const templatePar = content.querySelector('[data-template="project-par"]');
-        for(let par in projects[project].text) {
-            const item = templatePar.content.cloneNode(true);
-            item.querySelector('p').innerText = projects[project].text[par];
-            projectsPars.append(item);
-        }
+        templater({
+            "task" : "innerText",
+            "element" : content.querySelector('.project__title'),
+            "text" : project
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project'),
+            "attribute" : 'id',
+            "text" : `fade-trigger-${projects[project].type}-${Object.keys(projects).indexOf(project)}`
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project__btn--demo'),
+            "attribute" : 'href',
+            "text" : projects[project].links.demo
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project__btn--github'),
+            "attribute" : 'href',
+            "text" : projects[project].links.github
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project-imgs__preview.mobile .project-imgs__img'),
+            "attribute" : 'src',
+            "text" : projects[project].imgs.mobile
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project-imgs__preview.mobile .project-imgs__img'),
+            "attribute" : 'alt',
+            "text" : content.querySelector('.project-imgs__preview.mobile .project-imgs__img').getAttribute('alt').replace('%%', project)
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project-imgs__preview.desktop .project-imgs__img'),
+            "attribute" : 'src',
+            "text" : projects[project].imgs.desktop.small
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project-imgs__preview.desktop .project-imgs__img'),
+            "attribute" : 'alt',
+            "text" : content.querySelector('.project-imgs__preview.desktop .project-imgs__img').getAttribute('alt').replace('%%', project)
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project-imgs__preview.desktop source'),
+            "attribute" : 'srcset',
+            "text" : projects[project].imgs.desktop.large
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project-imgs__preview.desktop .project-imgs__img'),
+            "attribute" : 'src',
+            "text" : projects[project].imgs.desktop.small
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project-imgs__preview.desktop .project-imgs__img'),
+            "attribute" : 'alt',
+            "text" : content.querySelector('.project-imgs__preview.desktop .project-imgs__img').getAttribute('alt').replace('%%', project)
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project-imgs__preview.desktop source'),
+            "attribute" : 'srcset',
+            "text" : projects[project].imgs.desktop.large
+        });
+        templater({
+            "task" : "innerText",
+            "element" : null,
+            "text" : projects[project].stack,
+            "template" : content.querySelector('[data-template="project-stack"]'),
+            "parent" : content.querySelector('.project__stack')
+        });
+        templater({
+            "task" : "innerText",
+            "element" : null,
+            "text" : projects[project].text,
+            "template" : content.querySelector('[data-template="project-par"]'),
+            "parent" : content.querySelector('.project__summary')
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project-preview__picture .project-preview__img'),
+            "attribute" : 'src',
+            "text" : projects[project].imgs.preview.small
+        });
+        templater({
+            "task" : "setAttribute",
+            "element" : content.querySelector('.project-preview__picture source'),
+            "attribute" : 'srcset',
+            "text" : projects[project].imgs.preview.large
+        });
         switch (projects[project].type) {
             case "pro":
                 fragmentProjectPro.append(content);
