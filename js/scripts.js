@@ -3,7 +3,7 @@
 */
 const showInto = getExpiringStorage("showInto");
 const loader = document.querySelector('#loader');
-if(!showInto) { // 'show complete intro animation'
+if(!showInto) { // show complete intro animation
     setExpiringStorage("showInto", true, (1000 * 60 * 10)); // expiring set for 10 minutes after the localstorage creation
     const initFade = setInterval( () => {
         if(window.getComputedStyle(loader).opacity == 0) {
@@ -11,7 +11,7 @@ if(!showInto) { // 'show complete intro animation'
             clearInterval(initFade);
         }
     }, 500);
-} else { // 'show short intro animation'
+} else { // show short intro animation
     loader.classList.add('short-intro');
     setTimeout( () => {
         initPageAfterIntro();
@@ -47,7 +47,7 @@ const bindParallaxTriggers = () => {
 /*
     Functions
 */
-function toFadeIn(elements) {
+function toFadeIn(elements) { // triggered by parallax, fade in viewport with animation
     elements.forEach(element => {
         element.setAttribute("data-fadedin", "");
     });
@@ -99,7 +99,7 @@ document.querySelector('#switch-theme').addEventListener('change', (e) => {
     //document.querySelector('#switch-label-1').textContent = document.querySelector('#switch-label-1').getAttribute((e.target.checked) ? 'data-text-off' : 'data-text-on');
 });
 
-// Mail to
+// Mail to, to avoid to put my email in the index page source
 document.querySelectorAll('[data-event="mailto"]').forEach( item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
@@ -114,16 +114,17 @@ document.querySelectorAll('[data-event="mailto"]').forEach( item => {
 
 /*
     Append content from templates
+    Function that sets various custom value like text, attributes, css
 */
 function templater({task, element, text, attribute, css, template, parent}) {
     if(Array.isArray(text) === true) { // check if multiple elements need to be added to the DOM
         const arrayTexts = Array.from(text);
-        for(let el in arrayTexts) {
+        for(let el in arrayTexts) { // loop through every text and append a new node to their parent
             const item = template.content.cloneNode(true);
             parent.append(item);
             text = arrayTexts[el];
             element = parent.lastChild;
-            templater({task, element, text, attribute, css});
+            templater({task, element, text, attribute, css}); // recursive call with a single text element
         }
     }
     switch(task) {
@@ -311,5 +312,5 @@ function appendTemplateElements() {
     wrapperProjectPro.append(fragmentProjectPro);
     wrapperProjectPerso.append(fragmentProjectPerso);
 
-    bindParallaxTriggers();
+    bindParallaxTriggers(); // call parallax binding once every elements has been added to the DOM
 }
