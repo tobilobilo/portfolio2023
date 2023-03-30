@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html data-theme="dark" class="scroll-lock">
+<html lang="fr" data-theme="dark" class="scroll-lock">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
     <title>Jean-Pierre Rose - Développeur web front-end dans la région de Montréal</title>
-    <meta name="description" content="Je developpe et intègre des interfaces pour des sites et applications web. Je crée des produits accessibles et performants tout en offrant une excellente expérience utilisateur."/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="Je developpe et intègre des interfaces pour des sites et applications web. Je crée des produits accessibles et performants tout en offrant une excellente expérience utilisateur.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="stylesheet" href="./css/utilities.css?v.1.0.1">
     <link rel="stylesheet" href="./css/loader.css?v.1.0.1">
     <link rel="stylesheet" href="./css/style.css?v.1.0.1">
@@ -18,7 +18,7 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body onload="appendTemplateElements()"> 
-    <section class="loader" id="loader" aria-hidden="true">
+    <div class="loader" id="loader" aria-hidden="true">
         <div class="loader-content" id="loader-content">
             <img src="./svg/logo-jpr.svg" class="loader__logo" alt="Logo Jean-Pierre Rose, développeur web front-end">
             <div class="loader__cube">
@@ -37,14 +37,14 @@
                 </svg>
             </div>
         </div>
-    </section>
+    </div>
     <header class="header padded">
         <div class="header__ctas">
             <img src="svg/logo-jpr.svg" class="header__logo" alt="Logo Jean-Pierre Rose, développeur web front-end">
         </div>
-        <div class="theme-toggler">
-            <label class="show-tooltip" role="switch" aria-labelledby="switch-label-1">
-                <input type="checkbox" id="switch-theme" checked>
+        <div class="theme-toggler" role="switch">
+            <label class="show-tooltip" aria-label="Changer le thème">
+                <input type="checkbox" id="switch-theme" checked aria-label="Thème sombre" data-text-clair="Thème clair" data-text-sombre="Thème sombre">
                 <span class="switch">
                     <i class="fas fa-sun" data-element="theme-light-icon" aria-label="Thème clair"></i>
                     <i class="fas fa-moon" data-element="theme-dark-icon" aria-label="Thème sombre"></i>
@@ -64,11 +64,10 @@
                 <a class="about__link about__link--linkedin link-hover" href="https://www.linkedin.com/in/jean-pierre-rose/" target="_blank"><img src="svg/icon-linkedin.svg" class="about__svg" alt="Logo LinkedIn"></a>
             </div>
         </section>
-        <section class="animation" data-tofadein style="animation-delay:.9s;" aria-hidden="true">
+        <div class="animation" data-tofadein style="animation-delay:.9s;" aria-hidden="true">
             <img src="svg/cube2.svg" class="animation__cube" alt="Cube">
             <div class="animation__shadow cube__shadow"></div>
-        </section>
-        </section>
+        </div>
     </main>
     <section class="more padded" id="fade-trigger-01" data-fade-trigger>
         <h2 class="more__title subtitle highlight" data-tofadein>Un peu plus sur moi</h2>
@@ -159,10 +158,10 @@
     </section>
 
     <footer class="footer padded centered" id="fade-trigger-0x" data-fade-trigger>
-        <section class="footer__cube" data-tofadein aria-hidden="true">
+        <div class="footer__cube" data-tofadein aria-hidden="true">
             <img src="svg/cube2.svg" class="footer__cubeimg" alt="Cube">
             <div class="footer__cubeshadow"></div>
-        </section>
+        </div>
         <ul class="footer__links">
             <li class="footer__item" data-tofadein style="animation-delay:.4s;">
                 <button class="footer__link footer__link--email link-hover" data-event="mailto" aria-label="Couriel">
@@ -184,10 +183,10 @@
         <time class="footer__date" data-tofadein style="animation-delay:1s;">2023</time>
     </footer>
 
-    <script type="text/javascript" src="./js/lib/TweenMax.min.js"></script>
-	<script type="text/javascript" src="./js/lib/ScrollMagic.js"></script>
-	<script type="text/javascript" src="./js/lib/animation.gsap.js"></script>
-	<script type="text/javascript" src="./js/lib/debug.addIndicators.js"></script>
+    <script src="./js/lib/TweenMax.min.js"></script>
+	<script src="./js/lib/ScrollMagic.js"></script>
+	<script src="./js/lib/animation.gsap.js"></script>
+	<script src="./js/lib/debug.addIndicators.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/scripts.js"></script>
 </body>

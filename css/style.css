@@ -93,6 +93,7 @@ img, video {
 }
 [role="switch"] input[type="checkbox"]:focus + .switch,
 [role="switch"] .switch:hover {
+    cursor: pointer;
     border-color: var(--highlight-color);
 }
 [role="switch"] .switch:after {

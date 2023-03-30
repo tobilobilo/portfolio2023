@@ -96,6 +96,7 @@ function getExpiringStorage(key) {
 // Theme toggler
 document.querySelector('#switch-theme').addEventListener('change', (e) => {
     document.documentElement.setAttribute('data-theme', (e.target.checked) ? 'dark' : 'light');
+    e.target.setAttribute('aria-label', ((e.target.checked) ? e.target.getAttribute('data-text-sombre') : e.target.getAttribute('data-text-clair') ))
     //document.querySelector('#switch-label-1').textContent = document.querySelector('#switch-label-1').getAttribute((e.target.checked) ? 'data-text-off' : 'data-text-on');
 });
 
