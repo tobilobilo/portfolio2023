@@ -42,12 +42,12 @@
         <div class="header__ctas">
             <img src="svg/logo-jpr.svg" class="header__logo" alt="Logo Jean-Pierre Rose, développeur web front-end">
         </div>
-        <div class="theme-toggler" role="switch">
+        <div class="theme-toggler" data-element="switch">
             <label class="show-tooltip" aria-label="Changer le thème">
                 <input type="checkbox" id="switch-theme" checked aria-label="Thème sombre" data-text-clair="Thème clair" data-text-sombre="Thème sombre">
-                <span class="switch">
-                    <i class="fas fa-sun" data-element="theme-light-icon" aria-label="Thème clair"></i>
-                    <i class="fas fa-moon" data-element="theme-dark-icon" aria-label="Thème sombre"></i>
+                <span class="switch" aria-hidden="true">
+                    <i class="fas fa-sun" data-element="theme-light-icon"></i>
+                    <i class="fas fa-moon" data-element="theme-dark-icon"></i>
                 </span>
                 <!--span role="tooltip" class="tooltip-middle-left" id="switch-label-1" data-text-on="Activer le mode sombre" data-text-off="Déactiver le mode sombre">Déactiver le mode sombre</span-->
             </label>

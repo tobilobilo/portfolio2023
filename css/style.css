@@ -67,7 +67,7 @@ img, video {
         filter: var(--highlight-color-filtered);
     }
 
-[role="switch"] {
+[data-element="switch"] {
     position: relative;
     cursor: pointer;
     display: flex;
@@ -75,14 +75,14 @@ img, video {
     gap: .25rem;
     height: 100%;
 }
-[role="switch"] [type="checkbox"]:checked + .switch:after {
+[data-element="switch"] [type="checkbox"]:checked + .switch:after {
     transform: translateX(100%);
 }
-[role="switch"] [type="checkbox"] {
+[data-element="switch"] [type="checkbox"] {
     position: absolute;
     opacity: 0;
 }
-[role="switch"] .switch {
+[data-element="switch"] .switch {
     position: relative;
     display: inline-flex;
     box-sizing: content-box;
@@ -91,12 +91,12 @@ img, video {
     border: 2px solid transparent;
     transition: all 0.4s;
 }
-[role="switch"] input[type="checkbox"]:focus + .switch,
-[role="switch"] .switch:hover {
+[data-element="switch"] input[type="checkbox"]:focus + .switch,
+[data-element="switch"] .switch:hover {
     cursor: pointer;
     border-color: var(--highlight-color);
 }
-[role="switch"] .switch:after {
+[data-element="switch"] .switch:after {
     content: "";
     display: block;
     position: absolute;
@@ -110,7 +110,7 @@ img, video {
     transition: all 0.4s;
 }
 
-[role="switch"] .switch i {
+[data-element="switch"] .switch i {
     display: flex;
     width: 28px;
     height: 28px;
@@ -125,7 +125,7 @@ img, video {
     transition: all 0.4s;
 }
 @media screen and (min-width: 1440px) {
-    [role="switch"] .switch i {
+    [data-element="switch"] .switch i {
         width: 30px;
         height: 30px;
         font-size: 1rem;
@@ -133,8 +133,8 @@ img, video {
         transform: translateY(0px);
     }
 }
-html[data-theme="light"] [role="switch"] .switch i[data-element="theme-light-icon"],
-html[data-theme="dark"] [role="switch"] .switch i[data-element="theme-dark-icon"] {
+html[data-theme="light"] [data-element="switch"] .switch i[data-element="theme-light-icon"],
+html[data-theme="dark"] [data-element="switch"] .switch i[data-element="theme-dark-icon"] {
     opacity: 1;
     color: var(--highlight-color);
 }
