@@ -104,32 +104,32 @@
         <div class="projects__wrapper" data-element="project-pro">
             <template data-template="project">
                 <article class="project bottom-box project--mels" id="" data-fade-trigger>
-                    <section class="project__info" data-tofadein>
-                        <div class="project__preview" aria-hidden="true">
-                            <picture class="project-preview__picture">
-                                <source srcset="" media="(min-width: 660px)">
-                                <img class="project-preview__img" srcset="" alt="Aperçu du projet.">
-                            </picture>
-                        </div>
+                    <div class="project__info project__section" data-tofadein>
                         <div class="project__wrapper padded">
                             <h3 class="project__title"></h3>
-                            <summary class="project__summary">
+                            <div class="project__summary">
                                 <template data-template="project-par"><p></p></template>
-                            </summary>
+                            </div>
                             <div class="project__btns">
-                                <a href="" class="project__btn project__btn--demo show-tooltip link-hover" target="_blank">
-                                    <i class="fas fa-arrow-up-right-from-square" aria-label="Voir le projet"></i>
+                                <a href="" class="project__btn project__btn--demo show-tooltip link-hover" target="_blank" aria-label="Voir le projet">
+                                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
                                 </a>
-                                <a href="" class="project__btn project__btn--github show-tooltip link-hover" target="_blank">
-                                    <i class="fab fa-github" aria-label="Voir sur GitHub"></i>
+                                <a href="" class="project__btn project__btn--github show-tooltip link-hover" target="_blank" aria-label="Voir sur GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
                                 </a>
                             </div>
                             <ul class="project__stack">
                                 <template data-template="project-stack"><li></li></template>
                             </ul>
                         </div>
-                    </section>
-                    <section class="project-imgs">
+                        <div class="project__preview" aria-hidden="true">
+                            <picture class="project-preview__picture">
+                                <source srcset="" media="(min-width: 660px)">
+                                <img class="project-preview__img" src="" alt="Aperçu du projet.">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="project-imgs project__section">
                         <div class="project-imgs__preview mobile" data-tofadein style="animation-delay:.8s;">
                             <picture class="project-imgs__picture">
                                 <img src="" alt="Aperçu du projet '%%' sur un mobile." class="project-imgs__img">
@@ -138,10 +138,10 @@
                         <div class="project-imgs__preview desktop" data-tofadein style="animation-delay:.4s;">
                             <picture class="project-imgs__picture">
                                 <source srcset="" media="(min-width: 660px)">
-                                <img class="project-imgs__img" srcset="" alt="Aperçu du projet '%%' sur un moniteur.">
+                                <img class="project-imgs__img" src="" alt="Aperçu du projet '%%' sur un moniteur.">
                             </picture>
                         </div>
-                    </section>
+                    </div>
                 </article>
             </template>
 
