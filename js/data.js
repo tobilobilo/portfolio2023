@@ -7,13 +7,13 @@ const skills = {
     },
     'CSS': {
         'icon': 'svg/skill-css.svg',
-        'subskills': ['SASS / LESS', 'Bootstrap', 'BEM'],
+        'subskills': ['SASS / LESS', 'Tailwind', 'Bootstrap', 'BEM'],
         'animationdelay': '.55s',
         'extraclass': 'skills__logo--smaller'
     },
     'Javascript': {
         'icon': 'svg/skill-js.svg',
-        'subskills': ['ES6+', 'Vue.js', 'jQuery'],
+        'subskills': ['ES6+', 'React', 'Vue.js', 'jQuery'],
         'animationdelay': '.7s',
         'extraclass': null
     },
