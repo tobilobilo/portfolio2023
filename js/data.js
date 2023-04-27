@@ -79,6 +79,29 @@ const projects = {
         },
         'stack': ['Drupal']
     },
+    'Mes Idées Recettes': {
+        'type': 'perso',
+        'text': [
+            'Mes Idées Recettes est un projet motivé par le désir de me familiariser avec de nouvelles techs. L\'application puise ses données de l\'api gratuit The Meal DB. C\'est un projet uniquement front-end donc les données sont sauvegardées en local storage.',
+            'Projet exploratoire du framework React, Tailwind CSS et du gestionnaire d\'états Redux Toolkit.'
+        ],
+        'links': {
+            'demo': 'https://tobilobilo.github.io/idees-recettes',
+            'github': 'https://github.com/tobilobilo/idees-recettes'
+        },
+        'imgs': {
+            'preview': {
+                'small': './images/previews/ideesrecettes/ideesrecettes_bg.jpg',
+                'large': './images/previews/ideesrecettes/ideesrecettes_bg__lg.jpg'
+            },
+            'desktop': {
+                'small': './images/previews/ideesrecettes/ideesrecettes_desktop.jpg',
+                'large': './images/previews/ideesrecettes/ideesrecettes_desktop__lg.jpg'
+            },
+            'mobile': './images/previews/ideesrecettes/ideesrecettes_mobile.png'
+        },
+        'stack': ['React', 'Tailwind CSS', 'Redux Toolkit']
+    },
     'Mastermind': {
         'type': 'perso',
         'text': [
