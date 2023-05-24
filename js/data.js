@@ -25,7 +25,7 @@ const skills = {
     },
     'Outils': {
         'icon': 'svg/skill-toolbox.svg',
-        'subskills': ['Git', 'Drupal', 'Wordpress'],
+        'subskills': ['Git', 'Docker', 'Jira', 'Bitbucket'],
         'animationdelay': '1s',
         'extraclass': null
     },
