@@ -36,7 +36,7 @@ const projects = {
     'Studios MELS': {
         'type': 'pro',
         'text': [
-            'Site web corporatif des Studios MELS développé sous Wordpress.',
+            'Site web corporatif des Studios MELS.',
             'Reconnue mondialement pour ses studios de tournage et sa main d\'œuvre hautement qualifiée, MELS est l\'une des plus grandes entreprises de services de cinéma et de télévision au Canada. Elle propose un service clé en main, du scénario à la livraison.'
         ],
         'links': {
@@ -59,7 +59,7 @@ const projects = {
     'Groupe TVA': {
         'type': 'pro',
         'text': [
-            'Site web corporatif du Groupe TVA développé sous Drupal.',
+            'Site web corporatif du Groupe TVA.',
             'Groupe TVA est une entreprise québécoise active dans les domaines de la télévision, du film et des magazines. Elle est une propriété de Québecor Média. Les principaux actifs de l\'entreprise incluent le réseau TVA ainsi que six de ses dix stations régionales et des chaînes spécialisées.'
         ],
         'links': {
@@ -77,7 +77,30 @@ const projects = {
             },
             'mobile': './images/previews/groupetva/groupetva_mobile.jpg'
         },
-        'stack': ['Drupal']
+        'stack': ['Symfony', 'Twig', 'BEM']
+    },
+    'Agrégateur d\'annonces Kijiji': {
+        'type': 'perso',
+        'text': [
+            'Application qui récupère différents flux RSS provenant de Kijiji avec option de fetch automatique.',
+            'Cet app permet de suivre en temps réel les nouvelles annonces affichées selon des catégories choisies.'
+        ],
+        'links': {
+            'demo': 'https://tobilobilo.github.io/kijiji-monitoring/#/profil/demo',
+            'github': 'https://github.com/tobilobilo/kijiji-monitoring'
+        },
+        'imgs': {
+            'preview': {
+                'small': './images/previews/scrapper/scrapper_bg.jpg',
+                'large': './images/previews/scrapper/scrapper_bg__lg.jpg'
+            },
+            'desktop': {
+                'small': './images/previews/scrapper/scrapper_desktop.jpg',
+                'large': './images/previews/scrapper/scrapper_desktop__lg.jpg'
+            },
+            'mobile': './images/previews/scrapper/scrapper_mobile.jpg'
+        },
+        'stack': ['React', 'Typescript', 'TailwindCSS', 'Zustand']
     },
     'Mes Idées Recettes': {
         'type': 'perso',
@@ -100,7 +123,7 @@ const projects = {
             },
             'mobile': './images/previews/ideesrecettes/ideesrecettes_mobile.png'
         },
-        'stack': ['React', 'Tailwind CSS', 'Redux Toolkit']
+        'stack': ['React', 'TailwindCSS', 'ReduxToolkit']
     },
     'Mastermind': {
         'type': 'perso',
@@ -147,29 +170,6 @@ const projects = {
             'mobile': './images/previews/bingo/bingo_mobile.png'
         },
         'stack': ['Vue.js', 'Bootstrap']
-    },
-    'Agrégateur d\'annonces Kijiji': {
-        'type': 'perso',
-        'text': [
-            'Application qui récupère différents flux RSS provenant de Kijiji et les affiches automatiques aux 30 secondes.',
-            'C\'est un projet que j\'ai développé, il y a plusieurs années et dont je me sers encore fréquemment pour trouver des objets de seconde main ou de collection.'
-        ],
-        'links': {
-            'demo': 'http://mads.epizy.com/?p=demo',
-            'github': 'https://github.com/tobilobilo/kijiji-scrapper'
-        },
-        'imgs': {
-            'preview': {
-                'small': './images/previews/scrapper/scrapper_bg.png',
-                'large': './images/previews/scrapper/scrapper_bg__lg.png'
-            },
-            'desktop': {
-                'small': './images/previews/scrapper/scrapper_desktop.jpg',
-                'large': './images/previews/scrapper/scrapper_desktop__lg.jpg'
-            },
-            'mobile': './images/previews/scrapper/scrapper_mobile.jpg'
-        },
-        'stack': ['jQuery', 'PHP']
     },
     'Tic Tac Toe': {
         'type': 'perso',
